@@ -1,0 +1,276 @@
+.header{
+    background-color: rgb(255, 253, 250);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    display: flexbox;
+    flex-direction: column;
+    /* position: sticky;
+    --offset: 100px;
+    --fade: 120px;
+    -webkit-mask: linear-gradient(#0000 calc(100vh + var(--offset)), #000 calc(100vh + var(--offset) + var(--fade)));
+    mask: linear-gradient(hsla(0, 0%, 0%, 0) calc(100vh + var(--offset)), #000 calc(100vh + var(--offset) + var(--fade))); */
+    z-index: 100;
+}
+.colourfull-line{
+    object-fit: fill;
+    display: block;
+}
+.header-row-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 52px;
+    margin-right: 79px;
+}
+.header-row-1-wrapper{
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+}
+.phone-icon{
+    width: 24px;
+}
+.header-row-1-number{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+.header-row-1-text-1{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.header-row-1-text-2{
+    margin-bottom: 5px;
+}
+.header-row-2{
+    padding: 4px 52px; 
+    display: flex; 
+    justify-content: start; 
+    align-items: center; 
+    height: 70px; 
+    font-weight: 700;
+    margin-top: -13px;
+    margin-bottom: 5px;
+    margin-left: -10px;
+}
+.logo-box{
+    text-decoration: none; 
+    color: rgb(68, 75, 72); 
+    display: flex; 
+    flex-wrap: nowrap; 
+    margin-right: 50px;
+}
+.logo-img{
+    height: 50px; 
+    margin-right: 4px;
+}
+.logo-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-main-text{
+    font-size: 38px; 
+    display: flex; 
+    justify-content: center; 
+    margin-top: -5px;
+}
+.logo-text{
+    font-size: 10px; 
+    font-weight: 700; 
+    margin-top: -6px; 
+    display: flex; 
+    justify-content: center;
+}
+.header-row-2-options-box{
+    display: flex; 
+    margin-bottom: 13px;
+}
+.header-row-2-option-1, 
+.header-row-2-option-2, 
+.header-row-2-option-3, 
+.header-row-2-option-4, 
+.header-row-2-option-5{
+    display: flex; 
+    align-items: center; 
+    margin-right: 50px; 
+    font-size: 20px;
+    transition-duration: 0.2s;
+}
+.header-row-2-option-2,
+.header-row-2-option-4{
+    position: relative;
+}
+.header-row-2-option-1:hover, 
+.header-row-2-option-3:hover, 
+.header-row-2-option-5:hover{
+    margin-bottom: 7px;
+    background-color: rgb(232, 234, 230);
+    padding: 4px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: -8px;
+    margin-right: 42px;
+}
+.header-row-2-option-2:hover, 
+.header-row-2-option-4:hover{
+    margin-bottom: 7px;
+    background-color: rgb(232, 234, 230);
+    padding: 4px 8px;
+    border-radius: 10px;
+    cursor: default;
+    margin-left: -8px;
+    margin-right: 42px;
+}
+.header-row-2-option-2-drop{
+    cursor: pointer;
+}
+.header-row-2-option-2:hover .arrow-down, 
+.header-row-2-option-4:hover .arrow-down{
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+.header-row-2-option-2:hover .header-row-2-option-2-dropmenu-gap-filler, 
+.header-row-2-option-4:hover .header-row-2-option-4-dropmenu-gap-filler{
+    pointer-events: all;
+}
+.header-row-2-option-2 .arrow-down, 
+.header-row-2-option-4 .arrow-down{
+    transition-duration: 0.2s;
+}
+.header-row-2-option-subparts{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    white-space: nowrap;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: white;
+    font-weight: 700;
+    row-gap: 16px;
+    padding: 22px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    margin-left: -8px;
+    transition-duration: 0.2s;
+}
+.header-row-2-option-2:hover .header-row-2-option-subparts,
+.header-row-2-option-4:hover .header-row-2-option-subparts{
+    opacity: 1;
+    pointer-events: all;
+}
+.header-row-2-option-subparts:hover{
+    cursor: default;
+}
+.header-row-2-option-2-dropmenu-gap-filler{
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    background-color: blue;
+    border: 1px solid;
+    width: 109px;
+    height: 70px;
+    pointer-events: none;
+    opacity: 0;
+}
+.header-row-2-option-4-dropmenu-gap-filler{
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    background-color: blue;
+    border: 1px solid;
+    width: 125px;
+    height: 70px;
+    pointer-events: none;
+    opacity: 0;
+}
+.header-row-2-option-2-dropmenu-gap-filler:hover,
+.header-row-2-option-4-dropmenu-gap-filler:hover{
+    cursor: default;
+}
+.header-row-2-options:hover{
+    background-color: rgb(232, 234, 230);
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.header-row-2-options{
+    transition-duration: 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header-row-2-options:hover .arrow-right{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.header-row-2-options .arrow-right{
+    transition-duration: 0.4s;
+}
+.header-row-2-option-subparts-subpart{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 272px;
+    top: -10px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 700;
+    row-gap: 16px;
+    padding: 16px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.2s;
+}
+.header-row-2-option-2-dropmenu-gap-filler-2{
+    position: absolute;
+    top: -10px;
+    right: -135px;
+    background-color: blue;
+    border: 1px solid;
+    width: 109px;
+    height: 85px;
+    opacity: 0;
+}
+.header-row-2-option-2-dropmenu-gap-filler-3{
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    background-color: green;
+    border: 1px solid;
+    width: 40px;
+    height: 25px;
+    opacity: 0;
+}
+.header-row-2-option-2-dropmenu-gap-filler-2:hover,
+.header-row-2-option-2-dropmenu-gap-filler-3:hover{
+    cursor: default;
+}
+.header-row-2-options:hover .header-row-2-option-subparts-subpart{
+    opacity: 1;
+    pointer-events: all;
+}
+.header-row-2-options-2:hover{
+    background-color: rgb(232, 234, 230);
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.header-row-2-options-2{
+    transition-duration: 0.2s;
+}
+.header-row-2-option-subparts-subpart{
+    cursor: default;
+}

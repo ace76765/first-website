@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+div.highway-slider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+div.highway-slider div.highway-barrier {
+  overflow: hidden;
+  position: relative;
+}
+div.highway-slider ul.highway-lane {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+div.highway-slider ul.highway-lane li.highway-car {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FBF6E9;
+  color: #343434;
+}
+@-webkit-keyframes translatestf {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+@keyframes translatestf {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+#stffull div.highway-barrier ul.highway-lane {
+  width: 500%;
+}
+#stffull div.highway-barrier ul.highway-lane li.highway-car {
+  -webkit-animation: translatestf 30s linear infinite;
+  animation: translatestf 30s linear infinite;
+}
+@-webkit-keyframes translateinfinite {
+  100% {
+    transform: translateX(calc(-180px * 12));
+  }
+}
+@keyframes translateinfinite {
+  100% {
+    transform: translateX(calc(-180px * 12));
+  }
+}
+#infinite div.highway-barrier {
+  background: #FBF6E9;
+  border-radius: 40px;
+  border: 10px solid;
+  color: #343434;
+}
+#infinite div.highway-barrier::before,
+#infinite div.highway-barrier::after {
+  content: " ";
+  position: absolute;
+  z-index: 9;
+  width: 180px;
+  height: 100%;
+}
+#infinite div.highway-barrier::before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #FBF6E9 0%, rgba(255, 255, 255, 0) 100%);
+}
+#infinite div.highway-barrier::after {
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, #FBF6E9 0%, rgba(255, 255, 255, 0) 100%);
+}
+#infinite div.highway-barrier ul.highway-lane {
+  width: calc(180px * 24);
+}
+#infinite div.highway-barrier ul.highway-lane li.highway-car {
+  width: 180px;
+  -webkit-animation: translateinfinite 25s linear infinite;
+  animation: translateinfinite 25s linear infinite;
+}
+.highway-car{
+    font-weight: 700;
+    font-size: 48px;
+    font-family: Arial;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+        </style>
+    </head>
+    <body>
+        <div class="slide-option">
+            <div id="infinite" class="highway-slider">
+                <div class="container highway-barrier">
+                    <ul class="highway-lane">
+                        <!-- <li class="highway-car">&nbsp;&nbsp;&nbsp;TCS</li> -->
+                        <li class="highway-car">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCS</li>
+                        <li class="highway-car">APTECH</li>
+                        <li class="highway-car">STPI</li>
+                        <li class="highway-car">SWSM</li>
+                        <li class="highway-car">MAAC</li>
+                        <!-- <li class="highway-car">&nbsp;&nbsp;&nbsp;&nbsp;LYNX INC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li class="highway-car">&nbsp;&nbsp;&nbsp;UP POLICE</li> -->
+                        <li class="highway-car">LYNX INC</li>
+                        <li class="highway-car" style="z-index: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UP POLICE</li>
+
+                        <li class="highway-car">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCS</li>
+                        <li class="highway-car">APTECH</li>
+                        <li class="highway-car">STPI</li>
+                        <li class="highway-car">SWSM</li>
+                        <li class="highway-car">MAAC</li>
+                        <!-- <li class="highway-car">&nbsp;&nbsp;&nbsp;&nbsp;LYNX INC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li class="highway-car">&nbsp;&nbsp;&nbsp;UP POLICE</li> -->
+                        <li class="highway-car">LYNX INC</li>
+                        <li class="highway-car" style="z-index: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UP POLICE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
