@@ -1,0 +1,167 @@
+<style>
+    @font-face {
+    font-family: 'Better Sans';
+    font-display: swap;
+    src: url('https://media.better.com/fonts/bettersans/bettersans-regular.woff2') format('woff2'),
+        url('https://media.better.com/fonts/bettersans/bettersans-regular.woff') format('woff'),
+        url('https://media.better.com/fonts/bettersans/bettersans-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    }
+    @font-face {
+    font-family: 'Better Sans';
+    font-display: swap;
+    src: url('https://media.better.com/fonts/bettersans/bettersans-bold.woff2') format('woff2'),
+        url('https://media.better.com/fonts/bettersans/bettersans-bold.woff') format('woff'),
+        url('https://media.better.com/fonts/bettersans/bettersans-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    }
+    body{
+        font-family: Better Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        height: 10000px;
+    }
+    body{
+        margin: 0;
+        border: 0;
+        /* margin-top: 20px; */
+    }
+    @font-face{src:url('https://www.instacart.com/assets/instacart-sans-75570ad4a777421e7cbf9bb4622178f0.woff2') format('woff2-variations');font-family:Instacart Sans;font-display:swap;}
+    .a1-ques{
+        font-size: 40px;
+        font-weight: 700;
+        color: #343538;
+        text-align: center;
+        margin-bottom: 2.5%;
+        /* border: 1px solid black; */
+    }
+    .a-ques{
+        /* border: 1px solid black; */
+        margin: 0 69px;
+        padding: 32px 32px 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .a2-ques{
+        height: 70px;
+        border-bottom: 1px solid #E8E9EB;
+        padding: 24px 0px;
+        font-size: 1.8vw;
+        font-family: "Instacart Sans",Helvetica,Arial,sans-serif;
+        display: flex;
+        align-items: start;
+        color: #424242;
+        font-weight: normal;
+        cursor: pointer;
+        /* border: 1px solid black; */
+        width: 100%;
+        background: white;
+        position: relative;
+        transition: height 0.5s ease 0s;
+    }
+    .aa-ques{
+        width: 60vw;
+        /* border: 1px solid black; */
+    }
+    .a3-ques{
+        width: 50vw;
+        /* border: 1px solid black; */
+        line-height: 140%;
+        -webkit-font-smoothing: antialiased;
+    }
+    .arrow-down-q-ques {
+        border: solid #424242;
+        border-width: 0 6px 6px 0;
+        display: inline-block;
+        padding: 6px;
+        margin-left: 14%;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transition-duration: 0.5s;
+        margin-top: 3.2%;
+    }
+    .a2-ques:focus .arrow-down-q-ques{
+        transform: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+    }
+    .a2-ques:focus{
+        height: 50%;
+        pointer-events: none;
+    }
+    .a2-ques:focus .a2-expand-ques{
+        opacity: 1;
+    }
+    .a2-expand-ques{
+        position: absolute;
+        top: 15vh;
+        font-size: 1.7vw;
+        color: black;
+        font-weight: normal;
+        font-family: Better Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        text-align: justify;
+        line-height: 140%;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 0.5s;
+    }
+    .a2-expand-5-ques{
+        position: absolute;
+        top: 15vh;
+        font-size: 1.7vw;
+        color: black;
+        font-weight: normal;
+        font-family: Better Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        text-align: justify;
+        line-height: 140%;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 0.2s;
+    }
+    .a2-ques:focus .a2-expand-5-ques{
+        opacity: 1;
+        transition-duration: 1.1s;
+    }
+</style>
+<body>
+    <section class="a-ques">
+        <div class="aa-ques">
+            <div class="a1-ques">
+                Common Questions
+            </div>
+            <div>
+                <div class="a2-ques" tabindex="0">
+                    <div class="a3-ques">How does Alaska provide reliable and secure networks for wireless data and cloud solutions?</div>
+                    <i class="arrow-down-q-ques"></i>
+                    <div class="a2-expand-ques" style="margin-top: 2%;">Alaska has a team of experts who design, install, and maintain high-performance networks for wireless data and cloud solutions. We use the latest technologies and standards to ensure that our networks are fast, reliable, and secure. We also monitor our networks 24/7 and provide proactive support and troubleshooting to prevent any issues or downtime. We partner with leading network providers to offer you the best coverage and connectivity.</div>
+                </div>
+                <div class="a2-ques" tabindex="0">
+                    <div class="a3-ques">What are the benefits of wireless data and cloud solutions for businesses and individuals?</div>
+                    <i class="arrow-down-q-ques"></i>
+                    <div class="a2-expand-ques">Wireless data and cloud solutions can help businesses and individuals stay connected and productive in a fast-changing world. Wireless data enables you to access the internet, communicate, and collaborate from anywhere, anytime, and on any device. Cloud solutions allow you to store, manage, and access your data and applications on secure and scalable servers, without the hassle of maintaining your own infrastructure. Wireless data and cloud solutions can also help you save costs, improve efficiency, and enhance security.</div>
+                </div>
+                <div class="a2-ques" tabindex="0">
+                    <div class="a3-ques">What kind of data analytics services does Alaska offer?</div>
+                    <i class="arrow-down-q-ques"></i>
+                    <div class="a2-expand-ques" style="margin-top: 2%;">Alaska offers data analytics services that help you gain insights from your data and make informed decisions. We can help you collect, process, analyze, and visualize your data using advanced tools and techniques. We can also help you apply artificial intelligence and machine learning to your data to discover patterns, trends, and predictions. Whether you need to understand your customers, optimize your operations, or improve your products or services, we can help you achieve your goals with data analytics.</div>
+                </div>
+                <div class="a2-ques" tabindex="0">
+                    <div class="a3-ques">How does Alaska help businesses with cloud computing?</div>
+                    <i class="arrow-down-q-ques"></i>
+                    <div class="a2-expand-ques" style="margin-top: 4%;">Alaska helps businesses with cloud computing by providing them with various options and solutions to suit their needs. We can help you migrate your existing applications and data to the cloud or develop new cloud-native applications. We can also help you choose the best cloud platform for your business, whether it is public, private, or hybrid. We can also help you manage your cloud resources and optimize your cloud performance.</div>
+                </div>
+                <div class="a2-ques" tabindex="0">
+                    <div class="a3-ques">What are the features of Alaska&#39;s managed IT services?</div>
+                    <i class="arrow-down-q-ques"></i>
+                    <div class="a2-expand-5-ques" style="margin-top: 2%;">Alaska&#39;s managed services are designed to help you focus on your core business while we take care of your technology needs. We offer a range of services such as consulting, support, security, backup and recovery, disaster recovery, audit and compliance, training, and more. We have a team of certified and experienced professionals who can handle any challenge or project related to technology. We also provide flexible and affordable pricing plans that fit your budget.</div>
+                </div>
+                <div class="a2-ques" tabindex="0">
+                    <div class="a3-ques">How does Alaska differentiate itself from other wireless data and cloud solution providers?</div>
+                    <i class="arrow-down-q-ques"></i>
+                    <div class="a2-expand-ques" style="margin-top: 2%;">Alaska is a company that prides itself on providing seamless connectivity and tech-driven transformations for businesses and individuals. We have a vision of leading the evolution of IT and telecom services with our innovative wireless data and cloud solutions. We have a mission of delivering value, quality, and satisfaction to our customers with our expertise and experience. We have a culture of excellence, integrity, and collaboration that drives us to achieve our goals. We are Alaska, and we are here to help you.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

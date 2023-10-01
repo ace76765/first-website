@@ -1,0 +1,82 @@
+.aa-design{
+    font-family: "Instacart Sans",Helvetica,Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 4.25vh;
+    padding-bottom: 4.25vh;
+    /* border: 1px solid black; */
+}
+.a-design{
+    font-size: 3vw;
+    font-weight: normal;
+    font-variation-settings: "wght" 700,"opsz" 8;
+    color: black;
+    width: 50vw;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin-bottom: 4vh;
+    margin-top: 7%;
+}
+.c-design{
+    width: 100vw;
+    height: 45vh;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.b-design{
+    width: 65%;
+    height: 100%;
+}
+.b-design img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.d-design{
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    justify-content: center;
+    /* border: 1px solid black; */
+    padding-bottom: 7%;
+
+}
+.f-design{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.e-design{
+    width: 24%;
+    height: 90%;
+    background-color: #f6f7f8;
+    color: #343538;
+    border-radius: 8px;
+    font-family: "Instacart Sans",Helvetica,Arial,sans-serif;
+}
+.e1-design{
+    font-weight: 600;
+    font-variation-settings: "wght" 700,"opsz" 8;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    line-height: 4vh;
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 1.6vw;
+    margin-top: 9%;
+}
+.e2-design{
+    text-align: left;
+    line-height: 3.4vh;
+    font-size: 1.45vw;
+    margin-left: 1.6vw;
+    font-weight: 400;
+    font-variation-settings: "opsz" 8;
+    margin-top: 10%;
+}

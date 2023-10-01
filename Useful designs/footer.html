@@ -1,0 +1,183 @@
+<style>
+    body{
+        border: 0px;
+        margin: 0px;
+    }
+    .a1{
+        background-color: #FBF6E9;
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+    }
+    .a11{
+        /* border: 1px solid #000000; */
+        height: 80%;
+        width: 27%;
+        display: flexbox;
+    }
+    .a2{
+        width: 500px;
+        height: 300px;
+        /* max-width: 500px; */
+        /* max-height: 300px; */
+        margin-left: -6%;
+        display: flex;
+        overflow: hidden;
+        border-radius: 15px;
+        border: 5px solid #228369;
+        transition: all 0.6s;
+    }
+    .a3{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+        border-radius: 15px;
+        transition: all 0.6s;
+        /* box-shadow: 1px 2px 100px black; */
+    }
+    .a3:hover{
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    .a2:hover{
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+    }
+    .a22{
+        /* border: 1px solid #000000; */
+        height: 80%;
+        display: flexbox;
+    }
+    .a23{
+        margin-bottom: 5%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-left: -10%;
+    }
+    .a232{
+        margin-bottom: 5%;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-left: 10%;
+    }
+    .logo-box{
+        /* justify-content: center; */
+        /* border: 1px solid #000000; */
+        width: 100%;
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+    .text{
+        color: rgb(68, 75, 72);
+        margin-top: 15px;
+    }
+    .footer-l1{
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: 10%;
+    }
+    .footer-l2{
+        font-size: 1.15rem;
+        margin-left: 10%;
+        /* font-family: 'Roboto', sans-serif; */
+        line-height: 160%;
+        letter-spacing: 0.2px;
+    }
+    .footer-l2:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #first{
+        margin-bottom: 10px;
+    }
+    .footer-l1:hover{
+        cursor: default;
+    }
+    #first:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #first2{
+        margin-bottom: 20px;
+    }
+    #first2:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .a1-1{
+        background-color: #FBF6E9;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+</style>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/body.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Element</title>
+</head>
+<footer>
+    <div class="a1">
+        <div class="a11">
+            <a class="logo-box" href="#">
+                <img class="logo-img" src="icons/logo4.webp">
+                <div class="logo-text">
+                    <div class="logo-main-text">
+                        <strong>ALASKA</strong>
+                    </div>
+                    <div class="logo-text">
+                        DIGITAL SOLUTIONS PVT. LTD.
+                    </div>
+                </div>
+            </a>
+            <div class="text">
+                <div class="footer-l1">Services :</div>
+                <div class="footer-l2">Call Center</div>
+                <div class="footer-l2">System Integration</div>
+                <div class="footer-l2">Digitization Services</div>
+                <div class="footer-l2">Document Management Sol.</div>
+                <div class="footer-l2">Enterprise Cloud Solutions</div>
+                <div class="footer-l2">Power Solutions</div>
+                <div class="footer-l1">Employee :</div>
+                <div class="footer-l2">Webmail Access</div>
+                <div class="footer-l2">CRM</div>
+            </div>
+        </div>
+        <div class="a22">
+            <div class="a23">REACH US</div>
+            <a href="https://www.google.com/maps/place/Alaska+Digital+Solutions+Pvt+Ltd/@26.8674377,81.0172385,17.08z/data=!4m6!3m5!1s0x399be2cf23129abb:0x28829b960df14262!8m2!3d26.8680491!4d81.0194417!16s%2Fg%2F11pv2b74ty!5m2!1e4!1e2?entry=ttu" target="_blank">
+                <div class="a2">
+                    <img class="a3" src="./assets/01.jpg" alt="Map">
+                </div>
+            </a>
+        </div>
+        <div class="a11">
+            <div class="a232">MORE INFO</div>
+            <div class="footer-l1" id="first2">About Us</div>
+            <div class="footer-l1" id="first2">Career</div>
+            <div class="footer-l1" id="first2">Contact Us</div>
+            <div class="footer-l1">Address :</div>
+            <div class="footer-l2" style="line-height: 125%; margin-bottom: 5%; margin-top: 1%;">1/196, Vijayant Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010.</div>
+            <div class="footer-l2">(733) 693 8354</div>
+            <div class="footer-l2">contact@alaskadigital.in</div>
+        </div>
+    </div>
+    <div class="a1-1">
+        <p style="margin: 7px 0; border: 0;">Copyright © 2023 Alaska Digital Solutions Private Limited. All rights reserved.</p>
+    </div>
+</footer>
