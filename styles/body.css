@@ -155,7 +155,8 @@ div#slider figure {
     padding: 1vw 2vw;
 }
 .partners{
-    background-color: #FBF6E9;
+    /* background-color: #FBF6E9; */
+    background-color: rgb(255, 253, 250);
     /* background-color: #f0f7f1; */
     /* border: 1px solid; */
     display: flex;
@@ -205,7 +206,8 @@ div.highway-slider {
     /* color: #004733; */
     color: black;
     color: #073126;
-    background-color: #FBF6E9;
+    /* background-color: #FBF6E9; */
+    background-color: rgb(255, 253, 250);
     /* color: black; */
   }
   @-webkit-keyframes translatestf {
@@ -247,7 +249,8 @@ div.highway-slider {
     /* color: #FBF6E9; */
     /* background: #FBF6E9; */
     /* background: #f0f7f1; */
-    background-color: #FBF6E9;
+    /* background-color: #FBF6E9; */
+    background-color: rgb(255, 253, 250);
     /* color: #4C4637; */
     color: #004733;
     /* border-radius: 24px; */
@@ -322,6 +325,7 @@ div.highway-slider {
     /* padding: 0 7.5%; */
     /* justify-content: top; */
     overflow: hidden;
+    margin-top: 5.9vh;
     margin-bottom: 6vh;
   }
   .points-1-0{

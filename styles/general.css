@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Better Sans';
     font-display: swap;
-    src: url('https://media.better.com/fonts/bettersans/bettersans-regular.woff2') format('woff2'),
-        url('https://media.better.com/fonts/bettersans/bettersans-regular.woff') format('woff'),
-        url('https://media.better.com/fonts/bettersans/bettersans-regular.ttf') format('truetype');
+    src: url('../bettersans-regular.woff2') format('woff2'),
+        url('../bettersans-regular.woff') format('woff'),
+        url('../bettersans-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -11,9 +11,9 @@
 @font-face {
 font-family: 'Better Sans';
 font-display: swap;
-src: url('https://media.better.com/fonts/bettersans/bettersans-bold.woff2') format('woff2'),
-    url('https://media.better.com/fonts/bettersans/bettersans-bold.woff') format('woff'),
-    url('https://media.better.com/fonts/bettersans/bettersans-bold.ttf') format('truetype');
+src: url('../bettersans-bold.woff2') format('woff2'),
+    url('../bettersans-bold.woff') format('woff'),
+    url('../bettersans-bold.ttf') format('truetype');
 font-weight: 700;
 font-style: normal;
 font-stretch: normal;

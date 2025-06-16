@@ -1,7 +1,8 @@
 @font-face{src:url('https://www.instacart.com/assets/instacart-sans-75570ad4a777421e7cbf9bb4622178f0.woff2') format('woff2-variations');font-family:Instacart Sans;font-display:swap;}
 .a1-footer{
-    background-color: #FBF6E9;
-    background-color: #f9f7ef;
+    /* background-color: #FBF6E9;
+    background-color: #f9f7ef; */
+    background-color: rgb(255, 253, 250);
     height: 60vh;
     /* width: 100vw; */
     display: flex;
@@ -133,7 +134,8 @@ box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 .a1-1-footer{
-    background-color: #FBF6E9;
+    /* background-color: #FBF6E9; */
+    background-color: rgb(255, 253, 250);
     width: 100vw;
     display: flex;
     justify-content: center;
