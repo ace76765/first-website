@@ -140,44 +140,6 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(120deg)" }} />
               <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(150deg)" }} />
             </motion.div>
-
-            {/* Streaming Data Tracks */}
-            <svg className="absolute w-[95%] h-[95%] opacity-70" viewBox="0 0 200 200">
-              <style>
-                {`
-                  @keyframes dashBlue {
-                    to { stroke-dashoffset: -94; }
-                  }
-                  @keyframes dashIndigo {
-                    to { stroke-dashoffset: 0; }
-                  }
-                  .animate-dash-blue {
-                    animation: dashBlue 20s linear infinite;
-                    stroke-dashoffset: 0;
-                  }
-                  .animate-dash-indigo {
-                    animation: dashIndigo 15s linear infinite;
-                    stroke-dashoffset: 72;
-                  }
-                `}
-              </style>
-              <circle 
-                cx="100" cy="100" r="95" 
-                fill="none" stroke="url(#mobileStreamBlue)" strokeWidth="0.5" 
-                strokeDasharray="2 10 5 30"
-                className="animate-dash-blue"
-              />
-              <defs>
-                <linearGradient id="mobileStreamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.1" />
-                </linearGradient>
-                <linearGradient id="mobileStreamIndigo" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#6366f1" stopOpacity="0.1" />
-                </linearGradient>
-              </defs>
-            </svg>
           </div>
         </motion.div>
 
@@ -305,26 +267,6 @@ export default function Home() {
                 animate={{ scale: [1.25, 1, 1.25], opacity: [0.8, 0.5, 0.8], x: [30, -30, 30], y: [-20, 20, -20] }}
                 transition={{ duration: 18, ease: "easeInOut", repeat: Infinity }}
               />
-              
-              {/* Layer 3: Streaming Data Tracks */}
-              <svg className="absolute w-[95%] h-[95%] opacity-70" viewBox="0 0 200 200">
-                <circle 
-                  cx="100" cy="100" r="95" 
-                  fill="none" stroke="url(#streamBlue)" strokeWidth="0.5" 
-                  strokeDasharray="2 10 5 30"
-                  className="animate-dash-blue"
-                />
-                <defs>
-                  <linearGradient id="streamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.1" />
-                  </linearGradient>
-                  <linearGradient id="streamIndigo" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#6366f1" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#6366f1" stopOpacity="0.1" />
-                  </linearGradient>
-                </defs>
-              </svg>
             </div>
             
             <div className="hidden lg:block w-full h-full">

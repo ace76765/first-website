@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/first-website/images/carousel_1.jpg",
-  "/first-website/images/carousel_2.jpg",
-  "/first-website/images/carousel_3.jpg",
-  "/first-website/images/carousel_4.jpg",
-  "/first-website/images/carousel_5.jpg",
+  "/first-website/images/carousel_1.webp",
+  "/first-website/images/carousel_3.webp",
+  "/first-website/images/carousel_4.webp",
+  "/first-website/images/carousel_5.webp",
 ];
 
 export default function HeroCarousel() {
@@ -38,6 +37,7 @@ export default function HeroCarousel() {
             fill
             priority={idx === 0}
             className="object-cover"
+            unoptimized={true}
           />
         </div>
       ))}
