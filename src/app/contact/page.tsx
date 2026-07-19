@@ -77,7 +77,7 @@ export default function Contact() {
           {/* Presence Card */}
           <div className="glass-panel glass-panel-hover rounded-[2rem] p-6 sm:p-10 group transition-all">
             <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/50 border border-white/60 text-indigo-900 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-indigo-600 group-hover:to-blue-500 group-hover:text-white group-hover:border-transparent transition-all shadow-sm shrink-0">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/50 border border-white/60 text-accent-violet rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-accent-violet group-hover:to-accent-sky group-hover:text-white group-hover:border-transparent transition-all shadow-sm shrink-0">
                 <Globe className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
               <h3 className="text-xl sm:text-3xl font-extrabold text-indigo-950">Our Presence</h3>
