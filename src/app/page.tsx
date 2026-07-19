@@ -201,7 +201,7 @@ export default function Home() {
               className="text-base md:text-xl text-blue-950/70 mb-6 lg:mb-8 leading-relaxed font-medium pointer-events-auto max-w-[95%] lg:max-w-none mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{ 
                 __html: content.description
-                  .replace('Alaska', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">Alaska</span>')
+                  .replace('Alaska Digital Solutions', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">Alaska Digital Solutions</span>')
                   .replace('tech-driven transformations', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">tech-driven transformations</span>') 
                   .replace('IT and telecom services', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">IT and telecom services</span>') 
               }}

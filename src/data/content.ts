@@ -1,7 +1,7 @@
 export const content = {
   companyName: "Alaska Digital Solutions",
   tagline: "Pioneering digital connections, Innovations for today's world.",
-  description: "Unleashing seamless connectivity and tech-driven transformations, Alaska leads the evolution of IT and telecom services. We are a company that specializes in providing wireless data and cloud solutions for businesses and individuals.",
+  description: "Unleashing seamless connectivity and tech-driven transformations, Alaska Digital Solutions leads the evolution of IT and telecom services. We are a company that specializes in providing wireless data and cloud solutions for businesses and individuals.",
   
   services: [
     {
