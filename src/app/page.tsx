@@ -11,48 +11,6 @@ import Image from "next/image";
 
 // --- Sub-components for Interactivity ---
 
-function TiltWrapper({ children }: { children: React.ReactNode }) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x, { stiffness: 200, damping: 25 });
-  const mouseYSpring = useSpring(y, { stiffness: 200, damping: 25 });
-
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-    x.set(xPct);
-    y.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
-  return (
-    <motion.div
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="w-full h-full"
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 function AnimatedCounter({ from, to, suffix, label }: { from: number, to: number, suffix: string, label: string }) {
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -384,8 +342,7 @@ export default function Home() {
             </div>
             
             <div className="hidden lg:block w-full h-full">
-              <TiltWrapper>
-                <div className="relative w-full h-full group" style={{ transform: "translateZ(30px)" }}>
+                <div className="relative w-full h-full group">
                   
                   {/* Ultra-smooth, wide ambient glow */}
                   <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full opacity-80 pointer-events-none"></div>
@@ -407,7 +364,6 @@ export default function Home() {
                   </motion.div>
 
                 </div>
-              </TiltWrapper>
             </div>
           </motion.div>
         </div>
@@ -751,7 +707,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-4xl mx-auto">
             {[
               {
-                portrait: "/images/portrait_sarah.jpg",
+                portrait: "/first-website/images/portrait_sarah.jpg",
                 author: "Sarah Jenkins",
                 title: "Chief Technology Officer",
                 headline: "Alaska is a wonderful provider of IT and telecom services.",
@@ -762,7 +718,7 @@ export default function Home() {
                 )
               },
               {
-                portrait: "/images/portrait_david.jpg",
+                portrait: "/first-website/images/portrait_david.jpg",
                 author: "David Miller",
                 title: "Director of IT",
                 headline: "We are very happy with the services provided by Alaska.",
