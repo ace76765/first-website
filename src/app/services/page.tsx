@@ -94,7 +94,7 @@ export default function Services() {
  
                     <Link 
                       href={`/services/${service.id}`}
-                      className="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-slate-50 hover:bg-blue-600 text-slate-700 hover:text-white rounded-2xl font-bold transition-all duration-300 group/btn border border-slate-100 hover:border-blue-600"
+                      className="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 hover:from-blue-600 hover:to-indigo-600 text-blue-900 hover:text-white rounded-2xl font-bold transition-all duration-300 group/btn border border-blue-100/50 hover:border-blue-600 shadow-sm"
                     >
                       Explore Service 
                       <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
