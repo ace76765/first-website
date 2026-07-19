@@ -308,7 +308,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedCounter from={0} to={10} suffix="+" label="Years Experience" />
-            <AnimatedCounter from={0} to={400} suffix="+" label="Projects Delivered" />
+            <AnimatedCounter from={0} to={200} suffix="+" label="Projects Delivered" />
             <AnimatedCounter from={0} to={98} suffix="%" label="Client Satisfaction" />
           </div>
         </div>
