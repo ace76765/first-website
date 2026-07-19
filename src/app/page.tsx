@@ -273,11 +273,24 @@ export default function Home() {
               />
             </div>
             
-            <div className="hidden lg:block w-full h-full">
-                <div className="relative w-full h-full group">
+            <div className="hidden lg:block w-full h-full relative z-10">
+                {/* Outer Wrapper for Spinning Border Effect */}
+                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden p-[2px] shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)]">
                   
-                  {/* Clean Carousel Container without heavy gradients */}
-                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)] z-10 border border-blue-100">
+                  {/* Spinning Conic Gradient (Hardware Accelerated via Transform) */}
+                  <motion.div 
+                    className="absolute top-1/2 left-1/2 w-[150%] h-[150%] origin-center pointer-events-none"
+                    style={{
+                      x: "-50%",
+                      y: "-50%",
+                      background: "conic-gradient(from 0deg, transparent 0%, transparent 40%, rgba(56, 189, 248, 0.8) 50%, rgba(59, 130, 246, 1) 60%, transparent 70%, transparent 100%)",
+                    }}
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 6, ease: "linear", repeat: Infinity }}
+                  />
+                  
+                  {/* Inner Carousel Container (Masks the gradient to look like a border) */}
+                  <div className="w-full h-full rounded-[calc(2.5rem-2px)] overflow-hidden relative bg-white z-10">
                       <HeroCarousel />
                   </div>
 
