@@ -83,11 +83,11 @@ export default function Services() {
                       dangerouslySetInnerHTML={{ __html: service.description }}
                     />
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10">
+                    <div className="flex flex-col gap-3 sm:gap-3.5 mb-8 sm:mb-10">
                       {service.features?.flatMap(f => f.items).slice(0, 4).map((sub, idx) => (
-                        <div key={idx} className="flex items-center gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" />
-                          <span className="text-sm font-semibold text-slate-700 line-clamp-1">{sub}</span>
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                          <span className="text-[15px] font-semibold text-slate-700 leading-normal">{sub}</span>
                         </div>
                       ))}
                     </div>
