@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function InteractiveBackground() {
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-gradient-to-br from-sky-200 via-blue-200 to-indigo-200">
+    <div className="fixed top-0 left-0 w-full h-[150vh] z-[-1] overflow-hidden pointer-events-none bg-gradient-to-br from-sky-200 via-blue-200 to-indigo-200">
       
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] bg-[size:32px_32px]"></div>
