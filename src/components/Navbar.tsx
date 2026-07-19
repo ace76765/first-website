@@ -146,7 +146,7 @@ export default function Navbar() {
               Careers
             </Link>
             
-            <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 shadow-[0_0_20px_rgba(59,130,246,0.3)] border border-white/20 text-white rounded-full hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transition-all hover:scale-105 text-lg">
+            <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 border border-white/20 text-white rounded-full transition-all hover:scale-105 text-lg">
               Contact Us
             </Link>
           </div>
