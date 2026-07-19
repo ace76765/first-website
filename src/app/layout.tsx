@@ -103,7 +103,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable} ${nunito.variable} font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col min-h-screen text-blue-950 bg-slate-50 relative overflow-x-hidden w-full`}>
+      <body className={`${inter.variable} ${outfit.variable} ${nunito.variable} font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col min-h-screen text-blue-950 bg-sky-100 relative overflow-x-hidden w-full`}>
         <ScrollManager />
         <InteractiveBackground />
 

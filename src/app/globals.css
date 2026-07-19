@@ -3,6 +3,7 @@
 /* Prevent mobile browser viewport resize from causing layout shifts */
 html, body {
   overscroll-behavior-y: none;
+  background-color: #e0f2fe; /* Tailwind sky-100 */
 }
 
 
