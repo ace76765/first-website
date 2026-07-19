@@ -12,8 +12,10 @@ const images = [
 
 export default function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    setHasHydrated(true);
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000); // Change image every 5 seconds
@@ -23,24 +25,30 @@ export default function HeroCarousel() {
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
-      {images.map((src, idx) => (
-        <div
-          key={src}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-[1500ms] ease-in-out ${
-            idx === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ willChange: 'opacity' }}
-        >
-          <Image
-            src={src}
-            alt="Hero Background"
-            fill
-            priority={idx === 0}
-            className="object-cover"
-            unoptimized={true}
-          />
-        </div>
-      ))}
+      {images.map((src, idx) => {
+        // PERF: Prevent network contention. Only load the first LCP image initially.
+        // Load the remaining images in the background only after the page has hydrated.
+        if (idx !== 0 && !hasHydrated) return null;
+
+        return (
+          <div
+            key={src}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-[1500ms] ease-in-out ${
+              idx === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ willChange: 'opacity' }}
+          >
+            <Image
+              src={src}
+              alt="Hero Background"
+              fill
+              priority={idx === 0}
+              className="object-cover"
+              unoptimized={true}
+            />
+          </div>
+        );
+      })}
       
       {/* Soft cinematic lighting without washing out the image */}
       <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-blue-900/20 pointer-events-none" />
