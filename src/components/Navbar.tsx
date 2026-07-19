@@ -90,7 +90,7 @@ export default function Navbar() {
           </Link>
           
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-blue-950">
+          <div className="hidden lg:flex items-center gap-8 text-base font-semibold text-blue-950">
             {pathname !== "/" && (
               <Link href="/" onClick={handleHomeClick} className="relative hover:text-blue-600 transition-colors duration-300 after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-blue-600 after:rounded-full after:origin-center after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-out">
                 Home
@@ -146,7 +146,7 @@ export default function Navbar() {
               Careers
             </Link>
             
-            <Link href="/contact" className="px-6 py-2.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] border border-white/20 text-white rounded-full transition-all duration-500 hover:shadow-md font-semibold text-[15px]">
+            <Link href="/contact" className="px-6 py-2.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] border border-white/20 text-white rounded-full transition-all duration-500 hover:shadow-md font-semibold text-base">
               Contact Us
             </Link>
           </div>
