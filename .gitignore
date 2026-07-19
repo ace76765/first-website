@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reference folders
+first-website-main*/
+first-website-main/
+first-website-main 3/

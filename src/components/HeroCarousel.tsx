@@ -1,0 +1,45 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const images = [
+  "/images/carousel_1.jpg",
+  "/images/carousel_2.jpg",
+  "/images/carousel_3.jpg",
+  "/images/carousel_4.jpg",
+  "/images/carousel_5.jpg",
+];
+
+export default function HeroCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
+      <AnimatePresence initial={false}>
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt="Hero Background"
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        />
+      </AnimatePresence>
+      
+      {/* Soft cinematic lighting without washing out the image */}
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-blue-900/20 pointer-events-none" />
+      <div className="absolute inset-0 shadow-[inset_0_0_60px_rgba(255,255,255,0.2)] pointer-events-none" />
+    </div>
+  );
+}
