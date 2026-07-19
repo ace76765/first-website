@@ -99,10 +99,8 @@ function FAQAccordion({ faq, index }: { faq: any, index: number }) {
 export default function Home() {
   return (
     <div className="flex flex-col w-full text-blue-950 min-h-screen">
-      
-      {/* Dynamic Overlapping Hero Section */}
       <section 
-        className="relative w-full min-h-screen flex items-center justify-center pt-40 md:pt-48 pb-32 overflow-hidden -mt-20"
+        className="relative w-full min-h-[100dvh] flex items-center justify-center pt-24 pb-16 lg:pt-40 lg:pb-32 overflow-hidden -mt-20"
         style={{ maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)' }}
       >
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
@@ -149,7 +147,7 @@ export default function Home() {
             <motion.div 
               initial={false}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-block mb-6 pointer-events-auto"
+              className="inline-block mb-3 lg:mb-6 pointer-events-auto"
             >
               {/* Desktop version (glowing animated pill) */}
               <motion.div 
@@ -166,9 +164,9 @@ export default function Home() {
               </motion.div>
 
               {/* Mobile version (clean elegant pre-header text tag) */}
-              <div className="lg:hidden inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50/90 backdrop-blur-sm border border-blue-200/40 text-xs font-extrabold uppercase tracking-widest text-blue-600 shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping"></span>
-                Pioneering Enterprise Solutions
+              <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/70 border border-blue-100/50 text-[11px] font-semibold text-blue-600/90 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                Pioneering enterprise solutions
               </div>
             </motion.div>
             
