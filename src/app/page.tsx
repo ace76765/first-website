@@ -173,7 +173,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
-              className="text-[2.75rem] leading-[1.05] md:text-7xl lg:text-[5rem] font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
+              className="text-[2.75rem] leading-[1.05] md:text-7xl lg:text-[5rem] font-black font-[family-name:var(--font-inter)] mb-4 lg:mb-6 tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
             >
               <motion.span 
                 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-800 to-blue-950 inline-block pr-2 pb-2"
