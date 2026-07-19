@@ -202,7 +202,7 @@ export default function Home() {
               dangerouslySetInnerHTML={{ 
                 __html: content.description
                   .replace('Alaska Digital Solutions', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">Alaska Digital Solutions</span>')
-                  .replace('tech-driven transformations', '<span class="font-bold text-blue-950">tech-driven transformations</span>') 
+                  .replace('tech-driven', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">tech-driven</span>') 
                   .replace('IT and telecom services', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">IT and telecom services</span>') 
               }}
             />
