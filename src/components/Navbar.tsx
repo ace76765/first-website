@@ -85,7 +85,7 @@ export default function Navbar() {
             />
             <div className="flex flex-col leading-[1] min-w-0">
               <span className="font-outfit font-black text-lg md:text-2xl tracking-tighter text-slate-700 truncate">ALASKA</span>
-              <span className="text-[7px] md:text-[9px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-0 md:mt-0.5 truncate">DIGITAL SOLUTIONS PVT. LTD.</span>
+              <span className="text-[9px] md:text-[11px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-[-1px] md:mt-[-3px] truncate">DIGITAL SOLUTIONS PVT. LTD.</span>
             </div>
           </Link>
           
