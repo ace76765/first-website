@@ -102,40 +102,40 @@ export default function Home() {
       <section 
         className="relative w-full min-h-[100svh] flex items-center justify-center pt-32 pb-16 lg:pt-40 lg:pb-32 overflow-hidden -mt-20 lg:[mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
       >
-        {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
+        {/* Mobile Backdrop: Optimized 3D Globe with Hollow Center for Text Legibility */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 0.65, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute inset-0 z-0 lg:hidden pointer-events-none flex items-center justify-center overflow-hidden"
+          className="absolute inset-0 z-0 lg:hidden pointer-events-none flex items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,black_10%,transparent_55%,black_95%)] [-webkit-mask-image:linear-gradient(to_bottom,black_10%,transparent_55%,black_95%)]"
         >
-          <div className="relative w-[440px] h-[440px] flex items-center justify-center">
-            {/* True 3D Rotating Wireframe Globe */}
+          <div className="relative w-[900px] h-[900px] flex items-center justify-center opacity-75">
+            {/* Optimized 3D Rotating Wireframe Globe (Reduced ring count for performance) */}
             <motion.div 
               className="absolute w-[80%] h-[80%] rounded-full"
               animate={{ rotateZ: [0, 360], rotateX: [10, 30, 10], rotateY: [-20, 20, -20] }}
               transition={{ 
-                rotateZ: { duration: 40, ease: "linear", repeat: Infinity },
-                rotateX: { duration: 20, ease: "easeInOut", repeat: Infinity },
-                rotateY: { duration: 30, ease: "easeInOut", repeat: Infinity }
+                rotateZ: { duration: 60, ease: "linear", repeat: Infinity },
+                rotateX: { duration: 30, ease: "easeInOut", repeat: Infinity },
+                rotateY: { duration: 40, ease: "easeInOut", repeat: Infinity }
               }}
               style={{ perspective: 1200, transformStyle: "preserve-3d" }}
             >
               {/* Latitudes */}
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(0deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(30deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(60deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(90deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(120deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(150deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(0deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(30deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(60deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(90deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(120deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(150deg)" }} />
               
               {/* Longitudes */}
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(0deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(30deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(60deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(90deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(120deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(150deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(0deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(30deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(60deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(90deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(120deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(150deg)" }} />
             </motion.div>
           </div>
         </motion.div>
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
 
               {/* Mobile version (clean elegant pre-header text tag) */}
-              <div className="lg:hidden inline-flex items-center gap-2 px-2 py-1 text-[11px] font-bold text-blue-600/90 tracking-widest uppercase">
+              <div className="lg:hidden inline-flex items-center gap-2 px-2 py-1 text-[11px] font-bold text-blue-600/90 tracking-widest uppercase mb-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                 Pioneering enterprise solutions
               </div>
@@ -192,12 +192,12 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base md:text-xl text-blue-950/70 mb-6 lg:mb-8 leading-relaxed font-medium pointer-events-auto max-w-[95%] lg:max-w-none mx-auto lg:mx-0"
+              className="text-base sm:text-lg md:text-xl text-blue-950/70 mb-6 lg:mb-8 leading-[1.7] font-medium pointer-events-auto max-w-[95%] lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left"
               dangerouslySetInnerHTML={{ 
                 __html: content.description
-                  .replace('Alaska Digital Solutions', '<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 font-extrabold tracking-tight text-lg md:text-2xl animate-bg-pan inline-block pr-1">Alaska Digital Solutions</span>')
-                  .replace('tech-driven', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">tech-driven</span>') 
-                  .replace('IT and telecom services', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">IT and telecom services</span>') 
+                  .replace('Alaska Digital Solutions', '<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 font-extrabold tracking-tight text-[17px] sm:text-xl md:text-2xl animate-bg-pan inline-block pr-1">Alaska Digital Solutions</span>')
+                  .replace('tech-driven', '<span class="underline decoration-blue-400/60 decoration-2 sm:decoration-4 underline-offset-[3px] sm:underline-offset-4 font-bold text-blue-950">tech-driven</span>') 
+                  .replace('IT and telecom services', '<span class="underline decoration-blue-400/60 decoration-2 sm:decoration-4 underline-offset-[3px] sm:underline-offset-4 font-bold text-blue-950">IT and telecom services</span>') 
               }}
             />
             
