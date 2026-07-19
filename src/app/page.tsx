@@ -100,8 +100,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full text-blue-950 min-h-screen">
       <section 
-        className="relative w-full min-h-[100dvh] flex items-center justify-center pt-24 pb-16 lg:pt-40 lg:pb-32 overflow-hidden -mt-20"
-        style={{ maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)' }}
+        className="relative w-full min-h-[100dvh] flex items-center justify-center pt-32 pb-16 lg:pt-40 lg:pb-32 overflow-hidden -mt-20 lg:[mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
       >
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
         <motion.div 
@@ -141,7 +140,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <div className="max-w-[95%] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 w-full mt-[-2rem]">
+        <div className="max-w-[95%] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 w-full mt-4 lg:-mt-8">
           
           <div className="w-full lg:w-1/2 relative pointer-events-none z-20 flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div 
@@ -164,7 +163,7 @@ export default function Home() {
               </motion.div>
 
               {/* Mobile version (clean elegant pre-header text tag) */}
-              <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/70 border border-blue-100/50 text-[11px] font-semibold text-blue-600/90 shadow-sm">
+              <div className="lg:hidden inline-flex items-center gap-2 px-2 py-1 text-[11px] font-bold text-blue-600/90 tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                 Pioneering enterprise solutions
               </div>
@@ -174,7 +173,7 @@ export default function Home() {
               initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
-              className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 leading-[1.05] tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
+              className="text-[2.75rem] leading-[1.05] md:text-7xl lg:text-[5rem] font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
             >
               <motion.span 
                 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-800 to-blue-950 inline-block pr-2"
@@ -199,7 +198,7 @@ export default function Home() {
               initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-lg md:text-xl text-blue-950/70 mb-8 leading-relaxed font-medium pointer-events-auto max-w-[90%] lg:max-w-none mx-auto lg:mx-0"
+              className="text-base md:text-xl text-blue-950/70 mb-6 lg:mb-8 leading-relaxed font-medium pointer-events-auto max-w-[95%] lg:max-w-none mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{ 
                 __html: content.description
                   .replace('Alaska', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">Alaska</span>')
@@ -212,12 +211,12 @@ export default function Home() {
               initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 mt-8 pointer-events-auto w-full sm:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0 items-stretch sm:items-center justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 lg:gap-4 mt-6 lg:mt-8 pointer-events-auto w-full sm:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0 items-stretch sm:items-center justify-center lg:justify-start"
             >
-              <Link href="/services" className="group px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.8)] text-lg flex items-center justify-center gap-2 border border-white/20">
+              <Link href="/services" className="group px-8 py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.8)] text-[15px] lg:text-lg flex items-center justify-center gap-2 border border-white/20">
                 Explore Services <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
               </Link>
-              <Link href="/contact" className="px-10 py-5 bg-white/40 backdrop-blur-md text-blue-950 font-bold border border-blue-200 rounded-full hover:bg-white/60 hover:scale-105 transition-all shadow-sm text-lg flex items-center justify-center">
+              <Link href="/contact" className="px-8 py-4 lg:px-10 lg:py-5 bg-white/40 backdrop-blur-md text-blue-950 font-bold border border-blue-200 rounded-full hover:bg-white/60 hover:scale-105 transition-all shadow-sm text-[15px] lg:text-lg flex items-center justify-center">
                 Contact Sales
               </Link>
             </motion.div>
