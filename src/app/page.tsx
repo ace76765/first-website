@@ -241,16 +241,16 @@ export default function Home() {
                   rotateX: { duration: 20, ease: "easeInOut", repeat: Infinity },
                   rotateY: { duration: 30, ease: "easeInOut", repeat: Infinity }
                 }}
-                style={{ perspective: 1200, transformStyle: "preserve-3d" }}
+                style={{ perspective: 1200, transformStyle: "preserve-3d", willChange: "transform" }}
               >
-                {/* Dense Latitudes */}
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div key={`lat-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/40" style={{ transform: `rotateX(${i * 15}deg)` }} />
+                {/* Latitudes */}
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <div key={`lat-${i}`} className="absolute inset-0 rounded-full border border-blue-500/30" style={{ transform: `rotateX(${i * 20}deg)`, willChange: "transform" }} />
                 ))}
                 
-                {/* Dense Longitudes */}
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div key={`lon-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/40" style={{ transform: `rotateY(${i * 15}deg)` }} />
+                {/* Longitudes */}
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <div key={`lon-${i}`} className="absolute inset-0 rounded-full border border-blue-500/30" style={{ transform: `rotateY(${i * 20}deg)`, willChange: "transform" }} />
                 ))}
               </motion.div>
 
@@ -263,13 +263,13 @@ export default function Home() {
                   rotateX: { duration: 25, ease: "easeInOut", repeat: Infinity },
                   rotateY: { duration: 35, ease: "easeInOut", repeat: Infinity }
                 }}
-                style={{ perspective: 1000, transformStyle: "preserve-3d" }}
+                style={{ perspective: 1000, transformStyle: "preserve-3d", willChange: "transform" }}
               >
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <div key={`inner-lat-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-indigo-400/40 shadow-[0_0_8px_rgba(99,102,241,0.2)]" style={{ transform: `rotateX(${i * 22.5}deg)` }} />
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={`inner-lat-${i}`} className="absolute inset-0 rounded-full border border-indigo-400/30" style={{ transform: `rotateX(${i * 30}deg)`, willChange: "transform" }} />
                 ))}
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <div key={`inner-lon-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-indigo-400/40 shadow-[0_0_8px_rgba(99,102,241,0.2)]" style={{ transform: `rotateY(${i * 22.5}deg)` }} />
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={`inner-lon-${i}`} className="absolute inset-0 rounded-full border border-indigo-400/30" style={{ transform: `rotateY(${i * 30}deg)`, willChange: "transform" }} />
                 ))}
               </motion.div>
 
