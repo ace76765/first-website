@@ -106,11 +106,10 @@ export default function Navbar() {
               </Link>
               
               <div 
-                className={`absolute top-20 left-1/2 -translate-x-1/2 w-80 transition-all duration-300 ${dropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4'}`}
-                style={{ borderTop: '16px solid transparent' }}
+                className={`absolute top-20 left-1/2 -translate-x-1/2 w-80 pt-4 ${dropdownOpen ? 'visible' : 'invisible'}`}
               >
                 <div 
-                  className="bg-white/70 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5),0_8px_32px_0_rgba(31,38,135,0.15)] rounded-3xl p-3 flex flex-col gap-1"
+                  className={`bg-white/70 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5),0_8px_32px_0_rgba(31,38,135,0.15)] rounded-3xl p-3 flex flex-col gap-1 transition-all duration-300 origin-top ${dropdownOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95'}`}
                   style={{ backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}
                 >
                   {content.services.map((service, index) => (
