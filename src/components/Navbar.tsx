@@ -33,7 +33,7 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
-  const handleMobileLinkClick = () => () => {
+  const handleMobileLinkClick = (href: string) => () => {
     setMobileMenuOpen(false);
   };
 
