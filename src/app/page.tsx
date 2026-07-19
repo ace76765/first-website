@@ -108,7 +108,7 @@ export default function Home() {
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
         <motion.div 
           initial={false}
-          animate={{ opacity: 0.9, scale: 1 }}
+          animate={{ opacity: 0.35, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0 z-0 lg:hidden pointer-events-none flex items-center justify-center overflow-hidden"
         >
@@ -151,8 +151,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               className="inline-block mb-6 pointer-events-auto"
             >
+              {/* Desktop version (glowing animated pill) */}
               <motion.div 
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full backdrop-blur-xl border border-white/20 text-base font-bold text-white shadow-2xl relative overflow-hidden"
+                className="hidden lg:inline-flex items-center gap-3 px-8 py-4 rounded-full backdrop-blur-xl border border-white/20 text-base font-bold text-white shadow-2xl relative overflow-hidden"
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                 style={{ 
@@ -163,6 +164,12 @@ export default function Home() {
                 <span className="w-3 h-3 rounded-full bg-blue-400 animate-pulse relative z-10 shadow-[0_0_10px_rgba(96,165,250,0.8)]"></span>
                 <span className="relative z-10 drop-shadow-md tracking-wide">Pioneering Enterprise Solutions</span>
               </motion.div>
+
+              {/* Mobile version (clean elegant pre-header text tag) */}
+              <div className="lg:hidden inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50/90 backdrop-blur-sm border border-blue-200/40 text-xs font-extrabold uppercase tracking-widest text-blue-600 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping"></span>
+                Pioneering Enterprise Solutions
+              </div>
             </motion.div>
             
             <motion.h1 
@@ -207,7 +214,7 @@ export default function Home() {
               initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 mt-8 pointer-events-auto w-full sm:w-auto items-stretch sm:items-center justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 mt-8 pointer-events-auto w-full sm:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0 items-stretch sm:items-center justify-center lg:justify-start"
             >
               <Link href="/services" className="group px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.8)] text-lg flex items-center justify-center gap-2 border border-white/20">
                 Explore Services <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />

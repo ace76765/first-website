@@ -79,9 +79,9 @@ export default function Navbar() {
               height={56}
               className="w-9 h-9 md:w-14 md:h-14 object-contain shrink-0 group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" 
             />
-            <div className="flex flex-col leading-none min-w-0">
+            <div className="flex flex-col leading-[1] min-w-0">
               <span className="font-outfit font-black text-lg md:text-2xl tracking-tighter text-slate-700 truncate">ALASKA</span>
-              <span className="text-[7px] md:text-[9px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-0.5 md:mt-1.5 truncate">DIGITAL SOLUTIONS PVT. LTD.</span>
+              <span className="text-[7px] md:text-[9px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-0 md:mt-0.5 truncate">DIGITAL SOLUTIONS PVT. LTD.</span>
             </div>
           </Link>
           
