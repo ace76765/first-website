@@ -277,29 +277,15 @@ export default function Home() {
                 
                 {/* Outer Wrapper for Spinning Border Effect */}
                 <div className="relative w-full h-full rounded-[2.5rem] bg-blue-100/30 z-10 shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)]">
-                  
-                  {/* Subtle Tight Glow for the line itself (Not clipped by overflow) */}
-                  <div className="absolute inset-0 rounded-[2.5rem] overflow-visible pointer-events-none z-0">
-                    <motion.div 
-                      className="absolute top-1/2 left-1/2 w-[150%] h-[150%] origin-center opacity-80 blur-[6px]"
-                      style={{
-                        x: "-50%",
-                        y: "-50%",
-                        background: "conic-gradient(from 0deg, transparent 0%, transparent 45%, rgba(56, 189, 248, 1) 50%, rgba(59, 130, 246, 1) 55%, transparent 60%, transparent 100%)",
-                      }}
-                      animate={{ rotate: [0, 360] }}
-                      transition={{ duration: 6, ease: "linear", repeat: Infinity }}
-                    />
-                  </div>
 
-                  {/* Sharp Clipped Border Line */}
+                  {/* Sharp Clipped Border Line (Radiant Neon Light) */}
                   <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden p-[2px] z-10">
                     <motion.div 
                       className="absolute top-1/2 left-1/2 w-[150%] h-[150%] origin-center pointer-events-none"
                       style={{
                         x: "-50%",
                         y: "-50%",
-                        background: "conic-gradient(from 0deg, transparent 0%, transparent 45%, rgba(56, 189, 248, 1) 50%, rgba(59, 130, 246, 1) 55%, transparent 60%, transparent 100%)",
+                        background: "conic-gradient(from 0deg, transparent 0%, transparent 35%, rgba(56, 189, 248, 0.3) 45%, #ffffff 50%, rgba(56, 189, 248, 0.3) 55%, transparent 65%, transparent 100%)",
                       }}
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 6, ease: "linear", repeat: Infinity }}
