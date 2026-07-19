@@ -2,6 +2,7 @@ import { content } from "@/data/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, ChevronRight, Zap } from "lucide-react";
+import { FadeUpAnimator, FadeInViewAnimator } from "@/components/ClientAnimator";
 
 // Generate static params for all services
 export async function generateStaticParams() {
@@ -31,33 +32,41 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
         <div className="bg-white rounded-3xl sm:rounded-[2.5rem] shadow-sm p-6 sm:p-12 border border-slate-200/60 mb-8 sm:mb-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3"></div>
           
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-extrabold text-xs tracking-widest mb-6 uppercase border border-blue-100">
-            <Zap className="w-3.5 h-3.5" />
-            ENTERPRISE SOLUTION
-          </div>
+          <FadeUpAnimator delay={0.1}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-extrabold text-xs tracking-widest mb-6 uppercase border border-blue-100">
+              <Zap className="w-3.5 h-3.5" />
+              ENTERPRISE SOLUTION
+            </div>
+          </FadeUpAnimator>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-blue-950 mb-6 tracking-tight relative z-10 leading-[1.1]">
-            {service.title}
-          </h1>
+          <FadeUpAnimator delay={0.2}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-blue-950 mb-6 tracking-tight relative z-10 leading-[1.1]">
+              {service.title}
+            </h1>
+          </FadeUpAnimator>
           
-          <p 
-            className="text-lg sm:text-2xl text-blue-950/70 font-medium leading-relaxed relative z-10 max-w-3xl"
-            dangerouslySetInnerHTML={{ __html: service.description }}
-          />
+          <FadeUpAnimator delay={0.3}>
+            <p 
+              className="text-lg sm:text-2xl text-blue-950/70 font-medium leading-relaxed relative z-10 max-w-3xl"
+              dangerouslySetInnerHTML={{ __html: service.description }}
+            />
+          </FadeUpAnimator>
 
           {service.detailedDescription && (
-            <div className="mt-8 pt-8 border-t border-slate-100">
-              <p 
-                className="text-base sm:text-lg text-slate-600 leading-loose max-w-4xl"
-                dangerouslySetInnerHTML={{ __html: service.detailedDescription }}
-              />
-            </div>
+            <FadeUpAnimator delay={0.4}>
+              <div className="mt-8 pt-8 border-t border-slate-100">
+                <p 
+                  className="text-base sm:text-lg text-slate-600 leading-loose max-w-4xl"
+                  dangerouslySetInnerHTML={{ __html: service.detailedDescription }}
+                />
+              </div>
+            </FadeUpAnimator>
           )}
         </div>
         
         {/* Workflow Section (If exists) */}
         {service.workflow && (
-          <div className="mb-12 sm:mb-16">
+          <FadeInViewAnimator delay={0.1} className="mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl font-black text-blue-950 mb-8 px-2">How it works</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {service.workflow.map((step: any, idx: number) => (
@@ -70,12 +79,12 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                 </div>
               ))}
             </div>
-          </div>
+          </FadeInViewAnimator>
         )}
 
         {/* Features / Capabilities */}
         {service.features && service.features.length > 0 && (
-          <div className="space-y-6 sm:space-y-10">
+          <FadeInViewAnimator delay={0.2} className="space-y-6 sm:space-y-10">
             <h2 className="text-2xl sm:text-3xl font-black text-blue-950 px-2">Capabilities</h2>
             {service.features.map((feature: any, idx: number) => (
               <div key={idx} className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/50 shadow-sm">
@@ -95,10 +104,10 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                 </ul>
               </div>
             ))}
-          </div>
+          </FadeInViewAnimator>
         )}
         {/* Responsive CTA Card */}
-        <div className="block mt-12 sm:mt-20 bg-blue-950 rounded-3xl p-6 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+        <FadeInViewAnimator delay={0.3} className="block mt-12 sm:mt-20 bg-blue-950 rounded-3xl p-6 sm:p-12 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600/30 via-transparent to-transparent opacity-70"></div>
           <div className="relative z-10 max-w-2xl mx-auto">
             <h3 className="text-2xl sm:text-3xl font-black text-white mb-3 sm:mb-4">Ready to transform your business?</h3>
@@ -108,7 +117,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
               <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </FadeInViewAnimator>
 
       </div>
 
