@@ -85,8 +85,8 @@ export default function Services() {
                     
                     <div className="flex flex-col gap-3 sm:gap-3.5 mb-8 sm:mb-10">
                       {service.features?.flatMap(f => f.items).slice(0, 4).map((sub, idx) => (
-                        <div key={idx} className="flex items-center gap-3">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                           <span className="text-[15px] font-semibold text-slate-700 leading-normal">{sub}</span>
                         </div>
                       ))}
