@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { content } from "@/data/content";
 
@@ -71,9 +72,11 @@ export default function Navbar() {
           
           {/* Logo & Company Name */}
           <Link href="/" onClick={handleHomeClick} className="flex items-center gap-2 md:gap-3 group shrink min-w-0 max-w-[85%]">
-            <img 
+            <Image 
               src="/icons/logo4.webp" 
               alt="Alaska Digital Logo" 
+              width={56}
+              height={56}
               className="w-9 h-9 md:w-14 md:h-14 object-contain shrink-0 group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" 
             />
             <div className="flex flex-col leading-none min-w-0">

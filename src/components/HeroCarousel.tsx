@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const images = [
   "/images/carousel_1.jpg",
@@ -25,16 +26,22 @@ export default function HeroCarousel() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
       <AnimatePresence initial={false}>
-        <motion.img
+        <motion.div
           key={currentIndex}
-          src={images[currentIndex]}
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-        />
+        >
+          <Image
+            src={images[currentIndex]}
+            alt="Hero Background"
+            fill
+            priority={currentIndex === 0}
+            className="object-cover"
+          />
+        </motion.div>
       </AnimatePresence>
       
       {/* Soft cinematic lighting without washing out the image */}

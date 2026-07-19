@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, Zap, Shield, ShieldCheck, Cloud, Server, User
 import { useState, useEffect, useRef } from "react";
 import HeroCarousel from "@/components/HeroCarousel";
 import MobileDashboard from "@/components/MobileDashboard";
+import Image from "next/image";
 
 // --- Sub-components for Interactivity ---
 
@@ -766,7 +767,7 @@ export default function Home() {
               >
                 {/* Portrait Circle Top Center Sticking Out */}
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-stone-50 bg-slate-200 z-20 group-hover:scale-105 transition-transform duration-500">
-                  <img src={testimonial.portrait} alt={testimonial.author} className="w-full h-full object-cover" />
+                  <Image src={testimonial.portrait} alt={testimonial.author} fill className="object-cover" />
                 </div>
 
                 <div className="relative z-10 flex flex-col justify-between h-full">

@@ -7,6 +7,7 @@ import InteractiveBackground from "@/components/InteractiveBackground";
 import Navbar from "@/components/Navbar";
 import ScrollManager from "@/components/ScrollManager";
 import CtaStrip from "@/components/CtaStrip";
+import Image from "next/image";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,9 +27,6 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: content.companyName,
   description: content.tagline,
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 import { Mail, MapPin, ArrowRight } from "lucide-react";
@@ -42,7 +40,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-12 gap-12">
         <div className="md:col-span-4">
           <Link href="/" className="flex items-center gap-3 mb-6 group">
-            <img src="/icons/logo4.webp" alt="Alaska Digital Logo" className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" />
+            <Image src="/icons/logo4.webp" alt="Alaska Digital Logo" width={64} height={64} className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" />
             <div className="flex flex-col leading-none">
               <span className="font-outfit font-black text-3xl tracking-tighter text-slate-700">ALASKA</span>
               <span className="text-[10px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-1.5 drop-shadow-sm">DIGITAL SOLUTIONS PVT. LTD.</span>

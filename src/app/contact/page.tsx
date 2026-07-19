@@ -3,6 +3,7 @@
 import { content } from "@/data/content";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Globe, PhoneForwarded } from "lucide-react";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -11,10 +12,11 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 mt-8">
         <div className="relative rounded-[2.5rem] overflow-hidden glass-panel p-2 shadow-2xl">
           <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden">
-            <img 
+            <Image 
               src="/images/contact_hero.jpg" 
               alt="Network Connections" 
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-indigo-950/70 backdrop-blur-sm"></div>
             
