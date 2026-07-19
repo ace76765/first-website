@@ -16,7 +16,7 @@ export default function CtaStrip() {
   if (hideCta) return null;
 
   return (
-    <div className="bg-blue-600 py-12 px-6 shadow-inner">
+    <div className="bg-blue-600 py-8 md:py-12 px-6 shadow-inner">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         <div>
           <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2 tracking-tight">Ready to transform your business?</h3>
