@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  "/images/carousel_1.jpg",
-  "/images/carousel_2.jpg",
-  "/images/carousel_3.jpg",
-  "/images/carousel_4.jpg",
-  "/images/carousel_5.jpg",
+  "/first-website/images/carousel_1.jpg",
+  "/first-website/images/carousel_2.jpg",
+  "/first-website/images/carousel_3.jpg",
+  "/first-website/images/carousel_4.jpg",
+  "/first-website/images/carousel_5.jpg",
 ];
 
 export default function HeroCarousel() {

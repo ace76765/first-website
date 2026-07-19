@@ -149,7 +149,7 @@ export default function Home() {
       >
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={false}
           animate={{ opacity: 0.9, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0 z-0 lg:hidden pointer-events-none flex items-center justify-center overflow-hidden"
@@ -217,7 +217,7 @@ export default function Home() {
           
           <div className="w-full lg:w-1/2 relative pointer-events-none z-20 flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               className="inline-block mb-6 pointer-events-auto"
             >
@@ -236,7 +236,7 @@ export default function Home() {
             </motion.div>
             
             <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 leading-[1.05] tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
@@ -261,7 +261,7 @@ export default function Home() {
             </motion.h1>
             
             <motion.div 
-              initial={{ opacity: 0, x: -40 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-lg md:text-xl text-blue-950/70 mb-8 leading-relaxed font-medium pointer-events-auto max-w-[90%] lg:max-w-none mx-auto lg:mx-0"
@@ -274,7 +274,7 @@ export default function Home() {
             />
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 mt-8 pointer-events-auto w-full sm:w-auto items-stretch sm:items-center justify-center lg:justify-start"
@@ -289,7 +289,7 @@ export default function Home() {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             style={{ perspective: 1200 }}
