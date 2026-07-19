@@ -61,6 +61,7 @@ function Footer() {
         <div className="col-span-1 md:col-span-3">
           <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Services</h4>
           <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
+            <Link href="/services" className="hover:text-blue-600 text-blue-950/80 transition-colors">All Services</Link>
             {content.services.map((service) => (
               <Link key={service.id} href={`/services/${service.id}`} className="hover:text-blue-600 text-blue-950/80 transition-colors">
                 {service.title}
