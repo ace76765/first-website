@@ -344,24 +344,10 @@ export default function Home() {
             <div className="hidden lg:block w-full h-full">
                 <div className="relative w-full h-full group">
                   
-                  {/* Ultra-smooth, wide ambient glow */}
-                  <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full opacity-80 pointer-events-none"></div>
-
-                  {/* Looping Light Border Wrapper */}
-                  <motion.div 
-                    className="w-full h-full rounded-[2.5rem] p-[3px] shadow-[0_30px_80px_-20px_rgba(30,58,138,0.5)] relative z-10"
-                    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                    transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-                    style={{ 
-                      backgroundSize: "200% 200%", 
-                      backgroundImage: "linear-gradient(135deg, rgba(30,58,138,0.3) 0%, rgba(96,165,250,1) 40%, rgba(255,255,255,1) 50%, rgba(96,165,250,1) 60%, rgba(30,58,138,0.3) 100%)" 
-                    }}
-                  >
-                    <div className="w-full h-full rounded-[calc(2.5rem-3px)] overflow-hidden relative bg-blue-950">
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-white/10 z-10 pointer-events-none"></div>
+                  {/* Clean Carousel Container without heavy gradients */}
+                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)] z-10 border border-blue-100">
                       <HeroCarousel />
-                    </div>
-                  </motion.div>
+                  </div>
 
                 </div>
             </div>
