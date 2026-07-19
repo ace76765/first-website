@@ -98,9 +98,9 @@ function FAQAccordion({ faq, index }: { faq: any, index: number }) {
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full text-blue-950 min-h-screen">
+    <div className="flex flex-col w-full text-blue-950">
       <section 
-        className="relative w-full min-h-[100dvh] flex items-center justify-center pt-32 pb-16 lg:pt-40 lg:pb-32 overflow-hidden -mt-20 lg:[mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
+        className="relative w-full min-h-[100svh] flex items-center justify-center pt-32 pb-16 lg:pt-40 lg:pb-32 overflow-hidden -mt-20 lg:[mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
       >
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
         <motion.div 

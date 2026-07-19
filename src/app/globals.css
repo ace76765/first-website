@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Prevent mobile browser viewport resize from causing layout shifts */
+html, body {
+  overscroll-behavior-y: none;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: -webkit-fill-available;
+}
+
 @theme {
   --font-sans: var(--font-outfit);
   --font-display: var(--font-outfit);

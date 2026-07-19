@@ -17,8 +17,8 @@ export default function InteractiveBackground() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-300/40 blur-[120px]"></div>
       <div className="absolute top-[20%] left-[10%] w-[30%] h-[30%] rounded-full bg-sky-300/40 blur-[120px]"></div>
       
-      {/* Glass Overlay for texture */}
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[20px]"></div>
+      {/* Soft Overlay for texture */}
+      <div className="absolute inset-0 bg-white/30"></div>
     </div>
   );
 }
