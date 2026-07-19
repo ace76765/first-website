@@ -15,7 +15,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-5xl md:text-7xl font-black text-indigo-950 mb-4 sm:mb-6 tracking-tight drop-shadow-sm"
           >
-            About <span className="text-blue-600">Us</span>
+            About Us
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

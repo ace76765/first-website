@@ -15,7 +15,7 @@ export default function Careers() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-indigo-950 mb-6 tracking-tight drop-shadow-sm"
           >
-            Join <span className="text-blue-600">Our Team</span>
+            Join Our Team
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

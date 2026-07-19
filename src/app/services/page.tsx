@@ -2,17 +2,17 @@
 
 import { content } from "@/data/content";
 import { motion } from "framer-motion";
-import { CheckCircle2, Server, Phone, ShieldCheck, Database, FileText, ArrowRight, Zap, Globe2 } from "lucide-react";
+import { CheckCircle2, Headphones, TrendingUp, Cpu, Activity, Wifi, Award, FileDigit, ArrowRight, Zap } from "lucide-react";
 import Link from "next/link";
 
 const serviceIcons: Record<string, React.ReactNode> = {
-  "call-center": <Phone className="w-8 h-8" />,
-  "consulting": <Globe2 className="w-8 h-8" />,
-  "technology-infrastructure": <Server className="w-8 h-8" />,
-  "electrical-network-audits": <ShieldCheck className="w-8 h-8" />,
-  "telecom-services": <Database className="w-8 h-8" />,
-  "value-added-services": <Zap className="w-8 h-8" />,
-  "scanning-digitization": <FileText className="w-8 h-8" />,
+  "call-center": <Headphones className="w-8 h-8" />,
+  "consulting": <TrendingUp className="w-8 h-8" />,
+  "technology-infrastructure": <Cpu className="w-8 h-8" />,
+  "electrical-network-audits": <Activity className="w-8 h-8" />,
+  "telecom-services": <Wifi className="w-8 h-8" />,
+  "value-added-services": <Award className="w-8 h-8" />,
+  "scanning-digitization": <FileDigit className="w-8 h-8" />,
 };
 
 const serviceColors: Record<string, string> = {
@@ -36,7 +36,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-indigo-950 mb-6 tracking-tight drop-shadow-sm"
           >
-            Our <span className="text-blue-600">Services</span>
+            Our Services
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -68,10 +68,13 @@ export default function Services() {
                 transition={{ delay: index * 0.1 }}
                 className={`group relative ${index === 6 ? "md:col-span-2 lg:col-span-2" : ""}`}
               >
-                <div className="relative bg-gradient-to-br from-white/90 to-blue-50/30 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/90 flex flex-col h-full overflow-hidden transition-all duration-300 shadow-[0_20px_50px_-20px_rgba(30,58,138,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.1)] hover:border-blue-200/60 hover:from-white/95 hover:to-blue-50/50">
+                <div className="relative bg-gradient-to-br from-white/90 to-blue-50/30 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/90 flex flex-col h-full overflow-hidden transition-all duration-300 shadow-[0_20px_50px_-20px_rgba(30,58,138,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.15)] hover:border-blue-400/40 hover:from-white/95 hover:to-blue-100/30">
                   
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="mb-6 sm:mb-8">
+                    <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-blue-50/40 backdrop-blur-md border border-blue-100/50 text-blue-600 shadow-sm shrink-0">
+                        {serviceIcons[service.id] || <Zap className="w-8 h-8 sm:w-10 sm:h-10" />}
+                      </div>
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-950 tracking-tight leading-tight">{service.title}</h2>
                     </div>
                     
@@ -91,10 +94,10 @@ export default function Services() {
  
                     <Link 
                       href={`/services/${service.id}`}
-                      className="mt-auto relative inline-flex items-center justify-center gap-2 w-full py-4 text-blue-900 hover:text-white rounded-2xl font-bold transition-colors duration-500 group/btn border border-blue-100/50 hover:border-blue-600 shadow-sm overflow-hidden"
+                      className="mt-auto relative inline-flex items-center justify-center gap-2 w-full py-4 text-blue-900 hover:text-white rounded-2xl font-bold transition-colors duration-500 group/btn border border-blue-200/80 shadow-sm overflow-hidden"
                     >
                       {/* Default light gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 transition-opacity duration-500 group-hover/btn:opacity-0" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/80 to-indigo-100/80 transition-opacity duration-500 group-hover/btn:opacity-0" />
                       {/* Hover dark gradient background */}
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 transition-opacity duration-500 group-hover/btn:opacity-100" />
                       

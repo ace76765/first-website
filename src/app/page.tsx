@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <div className="max-w-[95%] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 w-full mt-4 lg:-mt-8">
+        <div className="max-w-[95%] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 w-full mt-4 lg:mt-4">
           
           <div className="w-full lg:w-1/2 relative pointer-events-none z-20 flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div 
@@ -148,19 +148,13 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               className="inline-block mb-3 lg:mb-6 pointer-events-auto"
             >
-              {/* Desktop version (glowing animated pill) */}
-              <motion.div 
-                className="hidden lg:inline-flex items-center gap-3 px-8 py-3.5 rounded-full backdrop-blur-md border border-blue-300/50 text-[15px] font-semibold text-blue-800 shadow-sm relative overflow-hidden tracking-wide"
-                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-                style={{ 
-                  backgroundSize: "200% 200%", 
-                  backgroundImage: "linear-gradient(90deg, rgba(239, 246, 255, 0.85), rgba(191, 219, 254, 0.9), rgba(239, 246, 255, 0.85))" 
-                }}
+              {/* Desktop version (clean transparent pill) */}
+              <div 
+                className="hidden lg:inline-flex items-center gap-3 px-8 py-3 rounded-full bg-blue-600/5 backdrop-blur-md border border-blue-600/20 text-base font-semibold text-blue-800 shadow-[0_2px_10px_-4px_rgba(37,99,235,0.1)] relative overflow-hidden"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse relative z-10"></span>
                 <span className="relative z-10 drop-shadow-sm">Pioneering Enterprise Solutions</span>
-              </motion.div>
+              </div>
 
               {/* Mobile version (clean elegant pre-header text tag) */}
               <div className="lg:hidden inline-flex items-center gap-2 px-2 py-1 text-[11px] font-bold text-blue-600/90 tracking-widest uppercase">
@@ -201,7 +195,7 @@ export default function Home() {
               className="text-base md:text-xl text-blue-950/70 mb-6 lg:mb-8 leading-relaxed font-medium pointer-events-auto max-w-[95%] lg:max-w-none mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{ 
                 __html: content.description
-                  .replace('Alaska Digital Solutions', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">Alaska Digital Solutions</span>')
+                  .replace('Alaska Digital Solutions', '<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 font-extrabold tracking-tight text-lg md:text-2xl animate-bg-pan inline-block pr-1">Alaska Digital Solutions</span>')
                   .replace('tech-driven', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">tech-driven</span>') 
                   .replace('IT and telecom services', '<span class="underline decoration-blue-400/60 decoration-4 underline-offset-4 font-bold text-blue-950">IT and telecom services</span>') 
               }}
