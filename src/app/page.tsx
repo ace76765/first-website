@@ -273,9 +273,24 @@ export default function Home() {
               />
             </div>
             
-            <div className="hidden lg:block w-full h-full relative z-10">
+            <div className="hidden lg:block w-full h-full relative z-10 group">
+                
+                {/* Glowing Aura for the Spinning Border */}
+                <div className="absolute inset-0 z-0">
+                  <motion.div 
+                    className="absolute top-1/2 left-1/2 w-[110%] h-[110%] origin-center pointer-events-none opacity-50 blur-[20px]"
+                    style={{
+                      x: "-50%",
+                      y: "-50%",
+                      background: "conic-gradient(from 0deg, transparent 0%, transparent 40%, rgba(56, 189, 248, 0.8) 50%, rgba(59, 130, 246, 1) 60%, transparent 70%, transparent 100%)",
+                    }}
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 6, ease: "linear", repeat: Infinity }}
+                  />
+                </div>
+
                 {/* Outer Wrapper for Spinning Border Effect */}
-                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden p-[2px] shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)]">
+                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden p-[2px] shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)] bg-blue-100/30 z-10">
                   
                   {/* Spinning Conic Gradient (Hardware Accelerated via Transform) */}
                   <motion.div 
@@ -283,7 +298,7 @@ export default function Home() {
                     style={{
                       x: "-50%",
                       y: "-50%",
-                      background: "conic-gradient(from 0deg, transparent 0%, transparent 40%, rgba(56, 189, 248, 0.8) 50%, rgba(59, 130, 246, 1) 60%, transparent 70%, transparent 100%)",
+                      background: "conic-gradient(from 0deg, transparent 0%, transparent 40%, rgba(56, 189, 248, 1) 50%, rgba(59, 130, 246, 1) 60%, transparent 70%, transparent 100%)",
                     }}
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 6, ease: "linear", repeat: Infinity }}
