@@ -8,36 +8,31 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <div className="min-h-screen text-indigo-950 pb-24">
-      {/* Photographic Glass Header */}
-      <div className="max-w-7xl mx-auto px-6 mt-8">
-        <div className="relative rounded-[2.5rem] overflow-hidden glass-panel p-2 shadow-2xl">
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden">
-            <Image 
-              src="/images/contact_hero.jpg" 
-              alt="Network Connections" 
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-indigo-950/70 backdrop-blur-sm"></div>
-            
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white drop-shadow-md"
-              >
-                Get in <span className="text-accent-violet">Touch</span>
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto font-medium"
-              >
-                We have a proven track record in IT and business support services.
-              </motion.p>
-            </div>
-          </div>
+      {/* Simple, Elegant Hero Section — matching About Us & Services */}
+      <div className="relative pt-24 sm:pt-32 pb-10 sm:pb-12 px-6 overflow-hidden">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl sm:text-5xl md:text-7xl font-black text-indigo-950 mb-4 sm:mb-6 tracking-tight drop-shadow-sm"
+          >
+            Get in <span className="text-blue-600">Touch</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-lg sm:text-xl md:text-2xl text-indigo-900/70 font-medium max-w-3xl mx-auto leading-relaxed"
+          >
+            We have a proven track record in IT and business support services.
+          </motion.p>
+          
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="w-32 h-1.5 bg-blue-600 mx-auto mt-8 sm:mt-12 rounded-full"
+          ></motion.div>
         </div>
       </div>
 
