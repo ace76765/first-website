@@ -20,7 +20,7 @@ function AnimatedCounter({ from, to, suffix, label }: { from: number, to: number
   useEffect(() => {
     if (isInView) {
       const controls = animate(from, to, {
-        duration: 2,
+        duration: 1.2,
         ease: "easeOut",
         onUpdate(value) {
           setValue(Math.round(value));
