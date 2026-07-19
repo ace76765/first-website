@@ -37,8 +37,8 @@ function Footer() {
       {/* Massive CTA Strip - Rendered conditionally */}
       <CtaStrip />
 
-      <div className="max-w-7xl mx-auto px-6 py-10 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-        <div className="md:col-span-4">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-20 grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12">
+        <div className="col-span-2 md:col-span-4">
           <Link href="/" className="flex items-center gap-3 mb-4 md:mb-6 group">
             <Image src="/icons/logo4.webp" alt="Alaska Digital Logo" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" />
             <div className="flex flex-col leading-none">
@@ -49,30 +49,27 @@ function Footer() {
           <p className="max-w-xs text-sm md:text-[15px] leading-relaxed text-blue-950/80 font-semibold mt-4">{content.tagline}</p>
         </div>
         
-        {/* Mobile 2-column link group (disappears into desktop grid via md:contents) */}
-        <div className="grid grid-cols-2 gap-8 col-span-1 md:col-span-5 md:contents">
-          <div>
-            <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Company</h4>
-            <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
-              <Link href="/about" className="hover:text-blue-600 text-blue-950/80 transition-colors">About Us</Link>
-              <Link href="/careers" className="hover:text-blue-600 text-blue-950/80 transition-colors">Careers</Link>
-              <Link href="/contact" className="hover:text-blue-600 text-blue-950/80 transition-colors">Contact</Link>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Services</h4>
-            <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
-              {content.services.map((service) => (
-                <Link key={service.id} href={`/services/${service.id}`} className="hover:text-blue-600 text-blue-950/80 transition-colors">
-                  {service.title}
-                </Link>
-              ))}
-            </div>
+        <div className="col-span-1 md:col-span-2">
+          <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Company</h4>
+          <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
+            <Link href="/about" className="hover:text-blue-600 text-blue-950/80 transition-colors">About Us</Link>
+            <Link href="/careers" className="hover:text-blue-600 text-blue-950/80 transition-colors">Careers</Link>
+            <Link href="/contact" className="hover:text-blue-600 text-blue-950/80 transition-colors">Contact</Link>
           </div>
         </div>
         
-        <div className="md:col-span-3">
+        <div className="col-span-1 md:col-span-3">
+          <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Services</h4>
+          <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
+            {content.services.map((service) => (
+              <Link key={service.id} href={`/services/${service.id}`} className="hover:text-blue-600 text-blue-950/80 transition-colors">
+                {service.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        
+        <div className="col-span-2 md:col-span-3">
           <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Contact</h4>
           <div className="flex items-start gap-4 mb-4 md:mb-5">
             <div className="w-5 flex justify-center shrink-0 mt-1">
