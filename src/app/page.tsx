@@ -167,12 +167,6 @@ export default function Home() {
                 strokeDasharray="2 10 5 30"
                 className="animate-dash-blue"
               />
-              <circle 
-                cx="100" cy="100" r="85" 
-                fill="none" stroke="url(#mobileStreamIndigo)" strokeWidth="1" 
-                strokeDasharray="40 15 2 15"
-                className="animate-dash-indigo"
-              />
               <defs>
                 <linearGradient id="mobileStreamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
@@ -314,19 +308,11 @@ export default function Home() {
               
               {/* Layer 3: Streaming Data Tracks */}
               <svg className="absolute w-[95%] h-[95%] opacity-70" viewBox="0 0 200 200">
-                <motion.circle 
+                <circle 
                   cx="100" cy="100" r="95" 
                   fill="none" stroke="url(#streamBlue)" strokeWidth="0.5" 
                   strokeDasharray="2 10 5 30"
-                  animate={{ strokeDashoffset: [0, -94] }}
-                  transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-                />
-                <motion.circle 
-                  cx="100" cy="100" r="85" 
-                  fill="none" stroke="url(#streamIndigo)" strokeWidth="1" 
-                  strokeDasharray="40 15 2 15"
-                  animate={{ strokeDashoffset: [72, 0] }}
-                  transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+                  className="animate-dash-blue"
                 />
                 <defs>
                   <linearGradient id="streamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
