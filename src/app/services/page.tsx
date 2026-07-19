@@ -94,12 +94,12 @@ export default function Services() {
  
                     <Link 
                       href={`/services/${service.id}`}
-                      className="mt-auto relative inline-flex items-center justify-center gap-2 w-full py-4 text-blue-900 hover:text-white rounded-2xl font-bold transition-colors duration-350 group/btn border border-blue-100/50 hover:border-blue-600 shadow-sm overflow-hidden"
+                      className="mt-auto relative inline-flex items-center justify-center gap-2 w-full py-4 text-blue-900 hover:text-white rounded-2xl font-bold transition-colors duration-500 group/btn border border-blue-100/50 hover:border-blue-600 shadow-sm overflow-hidden"
                     >
                       {/* Default light gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 transition-opacity duration-350 group-hover/btn:opacity-0" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 transition-opacity duration-500 group-hover/btn:opacity-0" />
                       {/* Hover dark gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 transition-opacity duration-350 group-hover/btn:opacity-100" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 transition-opacity duration-500 group-hover/btn:opacity-100" />
                       
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         Explore Service 
