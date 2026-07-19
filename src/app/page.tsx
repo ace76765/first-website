@@ -11,48 +11,6 @@ import Image from "next/image";
 
 // --- Sub-components for Interactivity ---
 
-function TiltWrapper({ children }: { children: React.ReactNode }) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x, { stiffness: 200, damping: 25 });
-  const mouseYSpring = useSpring(y, { stiffness: 200, damping: 25 });
-
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-    x.set(xPct);
-    y.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
-  return (
-    <motion.div
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="w-full h-full"
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 function AnimatedCounter({ from, to, suffix, label }: { from: number, to: number, suffix: string, label: string }) {
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -209,12 +167,6 @@ export default function Home() {
                 strokeDasharray="2 10 5 30"
                 className="animate-dash-blue"
               />
-              <circle 
-                cx="100" cy="100" r="85" 
-                fill="none" stroke="url(#mobileStreamIndigo)" strokeWidth="1" 
-                strokeDasharray="40 15 2 15"
-                className="animate-dash-indigo"
-              />
               <defs>
                 <linearGradient id="mobileStreamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
@@ -356,19 +308,11 @@ export default function Home() {
               
               {/* Layer 3: Streaming Data Tracks */}
               <svg className="absolute w-[95%] h-[95%] opacity-70" viewBox="0 0 200 200">
-                <motion.circle 
+                <circle 
                   cx="100" cy="100" r="95" 
                   fill="none" stroke="url(#streamBlue)" strokeWidth="0.5" 
                   strokeDasharray="2 10 5 30"
-                  animate={{ strokeDashoffset: [0, -94] }}
-                  transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-                />
-                <motion.circle 
-                  cx="100" cy="100" r="85" 
-                  fill="none" stroke="url(#streamIndigo)" strokeWidth="1" 
-                  strokeDasharray="40 15 2 15"
-                  animate={{ strokeDashoffset: [72, 0] }}
-                  transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+                  className="animate-dash-blue"
                 />
                 <defs>
                   <linearGradient id="streamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -384,30 +328,14 @@ export default function Home() {
             </div>
             
             <div className="hidden lg:block w-full h-full">
-              <TiltWrapper>
-                <div className="relative w-full h-full group" style={{ transform: "translateZ(30px)" }}>
+                <div className="relative w-full h-full group">
                   
-                  {/* Ultra-smooth, wide ambient glow */}
-                  <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full opacity-80 pointer-events-none"></div>
-
-                  {/* Looping Light Border Wrapper */}
-                  <motion.div 
-                    className="w-full h-full rounded-[2.5rem] p-[3px] shadow-[0_30px_80px_-20px_rgba(30,58,138,0.5)] relative z-10"
-                    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                    transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-                    style={{ 
-                      backgroundSize: "200% 200%", 
-                      backgroundImage: "linear-gradient(135deg, rgba(30,58,138,0.3) 0%, rgba(96,165,250,1) 40%, rgba(255,255,255,1) 50%, rgba(96,165,250,1) 60%, rgba(30,58,138,0.3) 100%)" 
-                    }}
-                  >
-                    <div className="w-full h-full rounded-[calc(2.5rem-3px)] overflow-hidden relative bg-blue-950">
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-white/10 z-10 pointer-events-none"></div>
+                  {/* Clean Carousel Container without heavy gradients */}
+                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)] z-10 border border-blue-100">
                       <HeroCarousel />
-                    </div>
-                  </motion.div>
+                  </div>
 
                 </div>
-              </TiltWrapper>
             </div>
           </motion.div>
         </div>
