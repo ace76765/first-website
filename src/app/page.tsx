@@ -185,19 +185,35 @@ export default function Home() {
 
             {/* Streaming Data Tracks */}
             <svg className="absolute w-[95%] h-[95%] opacity-70" viewBox="0 0 200 200">
-              <motion.circle 
+              <style>
+                {`
+                  @keyframes dashBlue {
+                    to { stroke-dashoffset: -94; }
+                  }
+                  @keyframes dashIndigo {
+                    to { stroke-dashoffset: 0; }
+                  }
+                  .animate-dash-blue {
+                    animation: dashBlue 20s linear infinite;
+                    stroke-dashoffset: 0;
+                  }
+                  .animate-dash-indigo {
+                    animation: dashIndigo 15s linear infinite;
+                    stroke-dashoffset: 72;
+                  }
+                `}
+              </style>
+              <circle 
                 cx="100" cy="100" r="95" 
                 fill="none" stroke="url(#mobileStreamBlue)" strokeWidth="0.5" 
                 strokeDasharray="2 10 5 30"
-                animate={{ strokeDashoffset: [0, -94] }}
-                transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+                className="animate-dash-blue"
               />
-              <motion.circle 
+              <circle 
                 cx="100" cy="100" r="85" 
                 fill="none" stroke="url(#mobileStreamIndigo)" strokeWidth="1" 
                 strokeDasharray="40 15 2 15"
-                animate={{ strokeDashoffset: [72, 0] }}
-                transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+                className="animate-dash-indigo"
               />
               <defs>
                 <linearGradient id="mobileStreamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
