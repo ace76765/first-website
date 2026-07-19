@@ -88,12 +88,14 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-8 text-lg font-black font-nunito text-blue-950">
             {pathname !== "/" && (
-              <Link href="/" onClick={handleHomeClick} className="hover:text-blue-600 transition-colors duration-300">
+              <Link href="/" onClick={handleHomeClick} className="group relative hover:text-blue-600 transition-colors duration-300">
                 Home
+                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 rounded-full origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
               </Link>
             )}
-            <Link href="/about" className="hover:text-blue-600 transition-colors duration-300">
+            <Link href="/about" className="group relative hover:text-blue-600 transition-colors duration-300">
               About
+              <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 rounded-full origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
             </Link>
             
             {/* Services Dropdown */}
@@ -102,8 +104,9 @@ export default function Navbar() {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link href="/services" className={`flex items-center gap-1 transition-colors duration-300 ${dropdownOpen ? 'text-blue-600' : 'hover:text-blue-600'}`}>
+              <Link href="/services" className={`group relative flex items-center gap-1 transition-colors duration-300 ${dropdownOpen ? 'text-blue-600' : 'hover:text-blue-600'}`}>
                 Services
+                <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 rounded-full origin-center transition-transform duration-300 ease-out ${dropdownOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
                 <svg className={`w-5 h-5 transition-transform duration-500 ${dropdownOpen ? '-rotate-180 text-blue-600' : 'text-blue-950/50'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -138,8 +141,9 @@ export default function Navbar() {
               </div>
             </div>
             
-            <Link href="/careers" className="hover:text-blue-600 transition-colors duration-300">
+            <Link href="/careers" className="group relative hover:text-blue-600 transition-colors duration-300">
               Careers
+              <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 rounded-full origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
             </Link>
             
             <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 shadow-[0_0_20px_rgba(59,130,246,0.3)] border border-white/20 text-white rounded-full hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transition-all hover:scale-105 text-lg">
