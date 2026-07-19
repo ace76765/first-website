@@ -37,51 +37,54 @@ function Footer() {
       {/* Massive CTA Strip - Rendered conditionally */}
       <CtaStrip />
 
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
         <div className="md:col-span-4">
-          <Link href="/" className="flex items-center gap-3 mb-6 group">
-            <Image src="/icons/logo4.webp" alt="Alaska Digital Logo" width={64} height={64} className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" />
+          <Link href="/" className="flex items-center gap-3 mb-4 md:mb-6 group">
+            <Image src="/icons/logo4.webp" alt="Alaska Digital Logo" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm" />
             <div className="flex flex-col leading-none">
-              <span className="font-outfit font-black text-3xl tracking-tighter text-slate-700">ALASKA</span>
-              <span className="text-[10px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-1.5 drop-shadow-sm">DIGITAL SOLUTIONS PVT. LTD.</span>
+              <span className="font-outfit font-black text-2xl md:text-3xl tracking-tighter text-slate-700">ALASKA</span>
+              <span className="text-[9px] md:text-[10px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-1 md:mt-1.5 drop-shadow-sm">DIGITAL SOLUTIONS PVT. LTD.</span>
             </div>
           </Link>
-          <p className="max-w-xs text-[15px] leading-relaxed text-blue-950/80 font-semibold mt-4">{content.tagline}</p>
+          <p className="max-w-xs text-sm md:text-[15px] leading-relaxed text-blue-950/80 font-semibold mt-4">{content.tagline}</p>
         </div>
         
-        <div className="md:col-span-2">
-          <h4 className="text-blue-950 font-black mb-6 text-xl tracking-wide">Company</h4>
-          <div className="flex flex-col gap-4 text-base font-bold">
-            <Link href="/about" className="hover:text-blue-600 text-blue-950/80 transition-colors">About Us</Link>
-            <Link href="/careers" className="hover:text-blue-600 text-blue-950/80 transition-colors">Careers</Link>
-            <Link href="/contact" className="hover:text-blue-600 text-blue-950/80 transition-colors">Contact</Link>
+        {/* Mobile 2-column link group (disappears into desktop grid via md:contents) */}
+        <div className="grid grid-cols-2 gap-8 col-span-1 md:col-span-5 md:contents">
+          <div>
+            <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Company</h4>
+            <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
+              <Link href="/about" className="hover:text-blue-600 text-blue-950/80 transition-colors">About Us</Link>
+              <Link href="/careers" className="hover:text-blue-600 text-blue-950/80 transition-colors">Careers</Link>
+              <Link href="/contact" className="hover:text-blue-600 text-blue-950/80 transition-colors">Contact</Link>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Services</h4>
+            <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base font-bold">
+              {content.services.map((service) => (
+                <Link key={service.id} href={`/services/${service.id}`} className="hover:text-blue-600 text-blue-950/80 transition-colors">
+                  {service.title}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
         
         <div className="md:col-span-3">
-          <h4 className="text-blue-950 font-black mb-6 text-xl tracking-wide">Services</h4>
-          <div className="flex flex-col gap-4 text-base font-bold">
-            {content.services.map((service) => (
-              <Link key={service.id} href={`/services/${service.id}`} className="hover:text-blue-600 text-blue-950/80 transition-colors">
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-        
-        <div className="md:col-span-3">
-          <h4 className="text-blue-950 font-black mb-6 text-xl tracking-wide">Contact</h4>
-          <div className="flex items-start gap-4 mb-5">
+          <h4 className="text-blue-950 font-black mb-4 md:mb-6 text-lg md:text-xl tracking-wide">Contact</h4>
+          <div className="flex items-start gap-4 mb-4 md:mb-5">
             <div className="w-5 flex justify-center shrink-0 mt-1">
               <Mail className="w-5 h-5 text-blue-600" />
             </div>
-            <p className="font-bold text-blue-950 break-all">{content.contact.email}</p>
+            <p className="font-bold text-blue-950 text-sm md:text-base break-all">{content.contact.email}</p>
           </div>
           <div className="flex items-start gap-4">
             <div className="w-5 flex justify-center shrink-0 mt-1">
               <MapPin className="w-5 h-5 text-blue-600" />
             </div>
-            <p className="leading-relaxed text-base text-blue-950/80 font-bold">{content.contact.address}</p>
+            <p className="leading-relaxed text-sm md:text-base text-blue-950/80 font-bold">{content.contact.address}</p>
           </div>
         </div>
       </div>
