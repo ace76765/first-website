@@ -71,10 +71,7 @@ export default function Services() {
                 <div className="relative bg-gradient-to-br from-white/90 to-blue-50/30 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/90 flex flex-col h-full overflow-hidden transition-all duration-300 shadow-[0_20px_50px_-20px_rgba(30,58,138,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.1)] hover:border-blue-200/60 hover:from-white/95 hover:to-blue-50/50">
                   
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-blue-50 border border-blue-100 text-blue-600 shadow-sm shrink-0">
-                        {serviceIcons[service.id] || <Zap className="w-8 h-8 sm:w-10 sm:h-10" />}
-                      </div>
+                    <div className="mb-6 sm:mb-8">
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-950 tracking-tight leading-tight">{service.title}</h2>
                     </div>
                     
