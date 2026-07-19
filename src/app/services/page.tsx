@@ -68,7 +68,7 @@ export default function Services() {
                 transition={{ delay: index * 0.1 }}
                 className={`group relative ${index === 6 ? "md:col-span-2 lg:col-span-2" : ""}`}
               >
-                <div className="relative bg-gradient-to-br from-white/70 via-white/40 to-blue-50/20 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/60 flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-blue-500/30 hover:from-white/90 hover:to-blue-50/40">
+                <div className="relative bg-gradient-to-br from-white/70 via-white/40 to-blue-50/20 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/60 flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-md hover:border-blue-500/30 hover:from-white/90 hover:to-blue-50/40">
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
@@ -94,10 +94,17 @@ export default function Services() {
  
                     <Link 
                       href={`/services/${service.id}`}
-                      className="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 hover:from-blue-600 hover:to-indigo-600 text-blue-900 hover:text-white rounded-2xl font-bold transition-all duration-300 group/btn border border-blue-100/50 hover:border-blue-600 shadow-sm"
+                      className="mt-auto relative inline-flex items-center justify-center gap-2 w-full py-4 text-blue-900 hover:text-white rounded-2xl font-bold transition-colors duration-350 group/btn border border-blue-100/50 hover:border-blue-600 shadow-sm overflow-hidden"
                     >
-                      Explore Service 
-                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                      {/* Default light gradient background */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 transition-opacity duration-350 group-hover/btn:opacity-0" />
+                      {/* Hover dark gradient background */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 transition-opacity duration-350 group-hover/btn:opacity-100" />
+                      
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        Explore Service 
+                        <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </span>
                     </Link>
                   </div>
                 </div>
