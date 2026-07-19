@@ -29,8 +29,12 @@ export default function Navbar() {
 
   // Removed scroll lock for dropdown menu
 
-  const handleHomeClick = () => {
+  const handleHomeClick = (e: React.MouseEvent) => {
     setMobileMenuOpen(false);
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const handleMobileLinkClick = (href: string) => () => {
