@@ -358,11 +358,8 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/60 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-100 hover:shadow-md transition-all duration-500 flex flex-col justify-start relative overflow-hidden group"
+                className="bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-200/60 hover:shadow-md hover:bg-white/60 transition-all duration-300 flex flex-col justify-start relative overflow-hidden group"
               >
-                {/* Subtle edge glowing circle on hover */}
-                <div className="absolute -right-8 -top-8 w-48 h-48 bg-blue-400/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110 pointer-events-none z-0" />
-                
                 <div className="relative z-10">
                   <div className="h-auto md:h-[195px] lg:h-[175px] flex flex-col justify-start">
                     <h3 className="text-2xl sm:text-3xl font-black text-blue-950 mb-3 sm:mb-4 tracking-tight">{feature.title}</h3>
