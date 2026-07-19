@@ -1,28 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function InteractiveBackground() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const springX = useSpring(mouseX, { stiffness: 150, damping: 25 });
-  const springY = useSpring(mouseY, { stiffness: 150, damping: 25 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      // Use requestAnimationFrame to batch updates and prevent main-thread thrashing
-      requestAnimationFrame(() => {
-        mouseX.set(e.clientX);
-        mouseY.set(e.clientY);
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
-
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-gradient-to-br from-sky-200 via-blue-200 to-indigo-200">
       
@@ -32,27 +12,6 @@ export default function InteractiveBackground() {
       {/* Very soft cinematic gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent"></div>
-      
-      {/* Glowing Spotlight following mouse - Smaller and subtler */}
-      <motion.div
-        className="absolute w-[300px] h-[300px] rounded-full bg-blue-300 blur-[80px] mix-blend-multiply opacity-20"
-        style={{
-          x: springX,
-          y: springY,
-          translateX: "-50%",
-          translateY: "-50%"
-        }}
-      />
-
-      <motion.div
-        className="absolute w-[150px] h-[150px] rounded-full bg-blue-100 blur-[50px] mix-blend-overlay opacity-50"
-        style={{
-          x: springX,
-          y: springY,
-          translateX: "-50%",
-          translateY: "-50%"
-        }}
-      />
       
       {/* Subtle Static Orbs for depth */}
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-300/40 blur-[120px]"></div>
