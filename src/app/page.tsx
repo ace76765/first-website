@@ -105,7 +105,7 @@ export default function Home() {
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
         <motion.div 
           initial={false}
-          animate={{ opacity: 0.35, scale: 1 }}
+          animate={{ opacity: 0.65, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0 z-0 lg:hidden pointer-events-none flex items-center justify-center overflow-hidden"
         >
@@ -122,20 +122,20 @@ export default function Home() {
               style={{ perspective: 1200, transformStyle: "preserve-3d" }}
             >
               {/* Latitudes */}
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(0deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(30deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(60deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(90deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(120deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(150deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(0deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(30deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(60deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(90deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(120deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateX(150deg)" }} />
               
               {/* Longitudes */}
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(0deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(30deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(60deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(90deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(120deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(150deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(0deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(30deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(60deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(90deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(120deg)" }} />
+              <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-600/80" style={{ transform: "rotateY(150deg)" }} />
             </motion.div>
           </div>
         </motion.div>
