@@ -202,7 +202,7 @@ export const content = {
       author: "Jane Doe",
       title: "Technical Director",
       company: "TCS",
-      logo: "/first-website/images/tcs.webp",
+      logo: "/images/tcs.webp",
       avatar: "https://i.pravatar.cc/150?img=47"
     },
     {
@@ -211,7 +211,7 @@ export const content = {
       author: "John Smith",
       title: "Head of Operations",
       company: "Aptech",
-      logo: "/first-website/images/aptech.webp",
+      logo: "/images/aptech.webp",
       avatar: "https://i.pravatar.cc/150?img=11"
     }
   ]

@@ -625,7 +625,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-4xl mx-auto">
             {[
               {
-                portrait: "/first-website/images/portrait_sarah.jpg",
+                portrait: "/images/portrait_sarah.jpg",
                 author: "Sarah Jenkins",
                 title: "Chief Technology Officer",
                 headline: "Alaska is a wonderful provider of IT and telecom services.",
@@ -636,7 +636,7 @@ export default function Home() {
                 )
               },
               {
-                portrait: "/first-website/images/portrait_david.jpg",
+                portrait: "/images/portrait_david.jpg",
                 author: "David Miller",
                 title: "Director of IT",
                 headline: "We are very happy with the services provided by Alaska.",

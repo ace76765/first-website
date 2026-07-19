@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="relative rounded-[2.5rem] overflow-hidden glass-panel p-2 shadow-2xl">
           <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden">
             <Image 
-              src="/first-website/images/contact_hero.jpg" 
+              src="/images/contact_hero.jpg" 
               alt="Network Connections" 
               fill
               className="object-cover"

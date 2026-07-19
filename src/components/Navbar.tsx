@@ -73,7 +73,7 @@ export default function Navbar() {
           {/* Logo & Company Name */}
           <Link href="/" onClick={handleHomeClick} className="flex items-center gap-2 md:gap-3 group shrink min-w-0 max-w-[85%]">
             <Image 
-              src="/first-website/icons/logo4.webp" 
+              src="/icons/logo4.webp" 
               alt="Alaska Digital Logo" 
               width={56}
               height={56}

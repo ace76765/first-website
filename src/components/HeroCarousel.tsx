@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/first-website/images/carousel_1.webp",
-  "/first-website/images/carousel_3.webp",
-  "/first-website/images/carousel_4.webp",
-  "/first-website/images/carousel_5.webp",
+  "/images/carousel_1.webp",
+  "/images/carousel_3.webp",
+  "/images/carousel_4.webp",
+  "/images/carousel_5.webp",
 ];
 
 export default function HeroCarousel() {
