@@ -90,7 +90,7 @@ export default function Navbar() {
           </Link>
           
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8 text-base font-semibold text-blue-950">
+          <div className="hidden lg:flex items-center gap-8 text-[17px] font-semibold text-blue-950">
             {pathname !== "/" && (
               <Link href="/" onClick={handleHomeClick} className="relative hover:text-blue-600 transition-colors duration-300 after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-blue-600 after:rounded-full after:origin-center after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-out">
                 Home
