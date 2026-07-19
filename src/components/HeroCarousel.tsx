@@ -25,6 +25,14 @@ export default function HeroCarousel() {
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
+      {/* Static placeholder for immediate SSR render and LCP optimization */}
+      <Image
+        src={images[0]}
+        alt="Hero Background"
+        fill
+        priority
+        className="object-cover"
+      />
       <AnimatePresence initial={false}>
         <motion.div
           key={currentIndex}
