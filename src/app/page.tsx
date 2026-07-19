@@ -243,21 +243,34 @@ export default function Home() {
                 }}
                 style={{ perspective: 1200, transformStyle: "preserve-3d" }}
               >
-                {/* Latitudes */}
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(0deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(30deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(60deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(90deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(120deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(150deg)" }} />
+                {/* Dense Latitudes */}
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <div key={`lat-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/40" style={{ transform: `rotateX(${i * 15}deg)` }} />
+                ))}
                 
-                {/* Longitudes */}
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(0deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(30deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(60deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(90deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(120deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(150deg)" }} />
+                {/* Dense Longitudes */}
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <div key={`lon-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/40" style={{ transform: `rotateY(${i * 15}deg)` }} />
+                ))}
+              </motion.div>
+
+              {/* Layer 1.5: Inner Counter-Rotating Core */}
+              <motion.div 
+                className="absolute w-[45%] h-[45%] rounded-full"
+                animate={{ rotateZ: [360, 0], rotateX: [-20, 40, -20], rotateY: [30, -30, 30] }}
+                transition={{ 
+                  rotateZ: { duration: 30, ease: "linear", repeat: Infinity },
+                  rotateX: { duration: 25, ease: "easeInOut", repeat: Infinity },
+                  rotateY: { duration: 35, ease: "easeInOut", repeat: Infinity }
+                }}
+                style={{ perspective: 1000, transformStyle: "preserve-3d" }}
+              >
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <div key={`inner-lat-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-indigo-400/40 shadow-[0_0_8px_rgba(99,102,241,0.2)]" style={{ transform: `rotateX(${i * 22.5}deg)` }} />
+                ))}
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <div key={`inner-lon-${i}`} className="absolute inset-0 rounded-full border-[0.5px] border-indigo-400/40 shadow-[0_0_8px_rgba(99,102,241,0.2)]" style={{ transform: `rotateY(${i * 22.5}deg)` }} />
+                ))}
               </motion.div>
 
               {/* Layer 2: Ethereal Liquid Aura (Hidden on mobile to preserve text clarity) */}
@@ -279,7 +292,7 @@ export default function Home() {
                 <div className="relative w-full h-full rounded-[2.5rem] bg-blue-100/30 z-10 shadow-[0_30px_80px_-20px_rgba(30,58,138,0.3)]">
 
                   {/* Sharp Clipped Border Line (Subtle) */}
-                  <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden p-[2px] z-10">
+                  <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden p-[4px] z-10">
                     <motion.div 
                       className="absolute top-1/2 left-1/2 w-[150%] h-[150%] origin-center pointer-events-none"
                       style={{
@@ -292,7 +305,7 @@ export default function Home() {
                     />
                     
                     {/* Inner Carousel Container */}
-                    <div className="w-full h-full rounded-[calc(2.5rem-2px)] overflow-hidden relative bg-white z-10">
+                    <div className="w-full h-full rounded-[calc(2.5rem-4px)] overflow-hidden relative bg-white z-10">
                         <HeroCarousel />
                     </div>
                   </div>
