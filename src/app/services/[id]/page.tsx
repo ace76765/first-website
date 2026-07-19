@@ -97,28 +97,19 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             ))}
           </div>
         )}
-        
-        {/* Desktop CTA (Hidden on mobile) */}
-        <div className="hidden sm:block mt-20 bg-blue-950 rounded-3xl p-12 text-center relative overflow-hidden shadow-2xl">
+        {/* Responsive CTA Card */}
+        <div className="block mt-12 sm:mt-20 bg-blue-950 rounded-3xl p-6 sm:p-12 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600/30 via-transparent to-transparent opacity-70"></div>
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h3 className="text-3xl font-black text-white mb-4">Ready to transform your business?</h3>
-            <p className="text-blue-200 text-lg mb-8 font-medium">Talk to our enterprise sales team to get a tailored quote for {service.title}.</p>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-blue-950 font-black rounded-full hover:scale-105 transition-transform shadow-xl text-lg group">
+            <h3 className="text-2xl sm:text-3xl font-black text-white mb-3 sm:mb-4">Ready to transform your business?</h3>
+            <p className="text-blue-200 text-sm sm:text-lg mb-6 sm:mb-8 font-medium">Talk to our enterprise sales team to get a tailored quote for {service.title}.</p>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 sm:px-10 sm:py-5 bg-white text-blue-950 font-black rounded-full hover:scale-105 transition-transform shadow-xl text-base sm:text-lg group">
               Contact Sales
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
 
-      </div>
-
-      {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-6 left-4 right-4 z-50 sm:hidden">
-        <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-4 bg-blue-600 text-white font-black rounded-2xl shadow-[0_10px_40px_-10px_rgba(37,99,235,0.8)] border border-white/20 active:scale-95 transition-transform text-lg">
-          Contact Sales
-          <ChevronRight className="w-5 h-5" />
-        </Link>
       </div>
 
     </div>
