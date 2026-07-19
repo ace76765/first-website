@@ -176,7 +176,7 @@ export default function Home() {
               className="text-[2.75rem] leading-[1.05] md:text-7xl lg:text-[5rem] font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
             >
               <motion.span 
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-800 to-blue-950 inline-block pr-2"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-800 to-blue-950 inline-block pr-2 pb-2"
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{ duration: 6, ease: "linear", repeat: Infinity }}
                 style={{ backgroundSize: "200% auto" }}
