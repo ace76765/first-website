@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
@@ -25,32 +24,23 @@ export default function HeroCarousel() {
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
-      {/* Static placeholder for immediate SSR render and LCP optimization */}
-      <Image
-        src={images[0]}
-        alt="Hero Background"
-        fill
-        priority
-        className="object-cover"
-      />
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={currentIndex}
-          className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+      {images.map((src, idx) => (
+        <div
+          key={src}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-[1500ms] ease-in-out ${
+            idx === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ willChange: 'opacity' }}
         >
           <Image
-            src={images[currentIndex]}
+            src={src}
             alt="Hero Background"
             fill
-            priority={currentIndex === 0}
+            priority={idx === 0}
             className="object-cover"
           />
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      ))}
       
       {/* Soft cinematic lighting without washing out the image */}
       <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-blue-900/20 pointer-events-none" />
