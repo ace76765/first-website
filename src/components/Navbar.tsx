@@ -106,12 +106,12 @@ export default function Navbar() {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link href="/services" className={`relative flex items-center gap-1 transition-colors duration-300 after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-blue-600 after:rounded-full after:origin-center after:transition-transform after:duration-300 after:ease-out ${dropdownOpen ? 'text-blue-600 after:scale-x-100' : 'hover:text-blue-600 after:scale-x-0 hover:after:scale-x-100'}`}>
+              <div className={`cursor-pointer relative flex items-center gap-1 transition-colors duration-300 after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-blue-600 after:rounded-full after:origin-center after:transition-transform after:duration-300 after:ease-out ${dropdownOpen ? 'text-blue-600 after:scale-x-100' : 'hover:text-blue-600 after:scale-x-0 hover:after:scale-x-100'}`}>
                 Services
                 <svg className={`w-4 h-4 transition-transform duration-500 ${dropdownOpen ? '-rotate-180 text-blue-600' : 'text-blue-950/50'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </Link>
+              </div>
               
               <div 
                 className={`absolute top-20 left-1/2 -translate-x-1/2 w-80 pt-4 ${dropdownOpen ? 'visible' : 'invisible'}`}
