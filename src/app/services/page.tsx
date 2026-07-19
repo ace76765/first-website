@@ -68,7 +68,7 @@ export default function Services() {
                 transition={{ delay: index * 0.1 }}
                 className={`group relative ${index === 6 ? "md:col-span-2 lg:col-span-2" : ""}`}
               >
-                <div className="relative bg-gradient-to-br from-blue-50/85 via-indigo-50/75 to-blue-100/55 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/80 flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-md hover:border-blue-500/30 hover:from-blue-50/95 hover:to-blue-100/70">
+                <div className="relative bg-gradient-to-br from-white/90 to-blue-50/30 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/90 flex flex-col h-full overflow-hidden transition-all duration-300 shadow-[0_20px_50px_-20px_rgba(30,58,138,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.1)] hover:border-blue-200/60 hover:from-white/95 hover:to-blue-50/50">
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
