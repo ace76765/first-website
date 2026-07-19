@@ -150,7 +150,7 @@ export default function Home() {
             >
               {/* Desktop version (glowing animated pill) */}
               <motion.div 
-                className="hidden lg:inline-flex items-center gap-3 px-8 py-3.5 rounded-full backdrop-blur-md border border-blue-300/50 text-[15px] font-semibold text-blue-950 shadow-sm relative overflow-hidden tracking-wide"
+                className="hidden lg:inline-flex items-center gap-3 px-8 py-3.5 rounded-full backdrop-blur-md border border-blue-300/50 text-[15px] font-semibold text-blue-800 shadow-sm relative overflow-hidden tracking-wide"
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                 style={{ 
