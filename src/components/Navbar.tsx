@@ -90,7 +90,7 @@ export default function Navbar() {
           </Link>
           
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8 text-lg font-black font-nunito text-blue-950">
+          <div className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-blue-950">
             {pathname !== "/" && (
               <Link href="/" onClick={handleHomeClick} className="relative hover:text-blue-600 transition-colors duration-300 after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-blue-600 after:rounded-full after:origin-center after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-out">
                 Home
@@ -108,8 +108,8 @@ export default function Navbar() {
             >
               <Link href="/services" className={`relative flex items-center gap-1 transition-colors duration-300 after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-blue-600 after:rounded-full after:origin-center after:transition-transform after:duration-300 after:ease-out ${dropdownOpen ? 'text-blue-600 after:scale-x-100' : 'hover:text-blue-600 after:scale-x-0 hover:after:scale-x-100'}`}>
                 Services
-                <svg className={`w-5 h-5 transition-transform duration-500 ${dropdownOpen ? '-rotate-180 text-blue-600' : 'text-blue-950/50'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                <svg className={`w-4 h-4 transition-transform duration-500 ${dropdownOpen ? '-rotate-180 text-blue-600' : 'text-blue-950/50'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
               
@@ -146,7 +146,7 @@ export default function Navbar() {
               Careers
             </Link>
             
-            <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] border border-white/20 text-white rounded-full transition-all duration-500 hover:shadow-md text-lg">
+            <Link href="/contact" className="px-6 py-2.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] border border-white/20 text-white rounded-full transition-all duration-500 hover:shadow-md font-semibold text-[15px]">
               Contact Us
             </Link>
           </div>
