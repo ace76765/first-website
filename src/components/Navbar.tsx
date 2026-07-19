@@ -88,27 +88,25 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-8 text-lg font-black font-nunito text-blue-950">
             {pathname !== "/" && (
-              <Link href="/" onClick={handleHomeClick} className="group transition-colors hover:text-blue-600 py-2">
-                <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1">Home</span>
+              <Link href="/" onClick={handleHomeClick} className="hover:text-blue-600 transition-colors duration-300">
+                Home
               </Link>
             )}
-            <Link href="/about" className="group transition-colors hover:text-blue-600 py-2">
-              <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1">About</span>
+            <Link href="/about" className="hover:text-blue-600 transition-colors duration-300">
+              About
             </Link>
             
             {/* Services Dropdown */}
             <div 
-              className="relative h-20 flex items-center group/nav"
+              className="relative h-20 flex items-center"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link href="/services" className="py-2">
-                <span className={`inline-flex items-center gap-1 transition-all duration-300 ${dropdownOpen ? '-translate-y-1 text-blue-600' : 'group-hover/nav:-translate-y-1 group-hover/nav:text-blue-600'}`}>
-                  Services
-                  <svg className={`w-5 h-5 transition-all duration-500 ${dropdownOpen ? '-rotate-180 text-blue-600' : 'text-blue-950/50 group-hover/nav:text-blue-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
+              <Link href="/services" className={`flex items-center gap-1 transition-colors duration-300 ${dropdownOpen ? 'text-blue-600' : 'hover:text-blue-600'}`}>
+                Services
+                <svg className={`w-5 h-5 transition-transform duration-500 ${dropdownOpen ? '-rotate-180 text-blue-600' : 'text-blue-950/50'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                </svg>
               </Link>
               
               <div 
@@ -140,8 +138,8 @@ export default function Navbar() {
               </div>
             </div>
             
-            <Link href="/careers" className="group transition-colors hover:text-blue-600 py-2">
-              <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1">Careers</span>
+            <Link href="/careers" className="hover:text-blue-600 transition-colors duration-300">
+              Careers
             </Link>
             
             <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 shadow-[0_0_20px_rgba(59,130,246,0.3)] border border-white/20 text-white rounded-full hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transition-all hover:scale-105 text-lg">
