@@ -87,7 +87,9 @@ export default function Navbar() {
           
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-8 text-lg font-black font-nunito text-blue-950">
-            <Link href="/" onClick={handleHomeClick} className="hover:text-blue-600 hover:-translate-y-1 transition-all">Home</Link>
+            {pathname !== "/" && (
+              <Link href="/" onClick={handleHomeClick} className="hover:text-blue-600 hover:-translate-y-1 transition-all">Home</Link>
+            )}
             <Link href="/about" className="hover:text-blue-600 hover:-translate-y-1 transition-all">About</Link>
             
             {/* Services Dropdown */}
@@ -174,9 +176,7 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-transparent lg:hidden z-30"
             onClick={() => setMobileMenuOpen(false)}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
+            onTouchStart={() => setMobileMenuOpen(false)}
           />
         )}
       </AnimatePresence>
@@ -189,33 +189,33 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[88px] left-[4%] right-[4%] z-40 bg-white lg:hidden flex flex-col p-6 rounded-3xl shadow-2xl border border-slate-100 max-h-[80vh] overflow-y-auto"
+            className="fixed top-[88px] left-[4%] right-[4%] z-40 bg-white lg:hidden flex flex-col p-5 rounded-3xl shadow-2xl border border-slate-100 max-h-[60vh] overflow-y-auto"
           >
-            <div className="flex flex-col gap-4 font-outfit">
+            <div className="flex flex-col gap-3 font-outfit">
               {menuOpenedOnPath !== "/" && (
-                <Link href="/" onClick={handleHomeClick} className="border-b border-slate-100 pb-3 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">Home</Link>
+                <Link href="/" onClick={handleHomeClick} className="border-b border-slate-100 pb-2 text-base font-semibold text-blue-950 hover:text-blue-600 transition-colors">Home</Link>
               )}
-              <Link href="/about" className="border-b border-slate-100 pb-3 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">About</Link>
+              <Link href="/about" className="border-b border-slate-100 pb-2 text-base font-semibold text-blue-950 hover:text-blue-600 transition-colors">About</Link>
               
-              <div className="flex flex-col gap-2 border-b border-slate-100 pb-3">
-                <Link href="/services" className="group flex items-center justify-between text-blue-950/50 hover:text-blue-600 transition-colors uppercase tracking-widest text-xs font-bold py-1">
+              <div className="flex flex-col gap-1 border-b border-slate-100 pb-2.5">
+                <Link href="/services" className="group flex items-center justify-between text-blue-950/50 hover:text-blue-600 transition-colors uppercase tracking-widest text-[10px] font-bold py-0.5">
                   Our Services
-                  <div className="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-50 transition-all">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  <div className="w-5 h-5 rounded-full bg-slate-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-50 transition-all">
+                    <ArrowRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>
-                <div className="flex flex-col gap-2.5 mt-1 pl-2">
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 mt-1 pl-1">
                   {content.services.map((service) => (
-                    <Link key={service.id} href={`/services/${service.id}`} className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors py-1">
+                    <Link key={service.id} href={`/services/${service.id}`} className="text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors py-0.5 leading-snug">
                       {service.title}
                     </Link>
                   ))}
                 </div>
               </div>
               
-              <Link href="/careers" className="border-b border-slate-100 pb-3 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">Careers</Link>
+              <Link href="/careers" className="border-b border-slate-100 pb-2 text-base font-semibold text-blue-950 hover:text-blue-600 transition-colors">Careers</Link>
               
-              <Link href="/contact" className="mt-2 block w-full py-3.5 text-center bg-blue-600 text-white font-semibold text-base rounded-2xl shadow-md active:scale-95 transition-transform">
+              <Link href="/contact" className="mt-1 block w-full py-2.5 text-center bg-blue-600 text-white font-semibold text-sm rounded-2xl shadow-md active:scale-95 transition-transform">
                 Contact Sales
               </Link>
             </div>
