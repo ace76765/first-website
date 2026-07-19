@@ -150,15 +150,15 @@ export default function Home() {
             >
               {/* Desktop version (glowing animated pill) */}
               <motion.div 
-                className="hidden lg:inline-flex items-center gap-3 px-5 py-2 rounded-full backdrop-blur-md border border-blue-200/50 text-xs font-bold text-blue-900 shadow-sm relative overflow-hidden uppercase tracking-widest"
+                className="hidden lg:inline-flex items-center gap-3 px-8 py-3.5 rounded-full backdrop-blur-md border border-blue-200/60 text-[15px] font-medium text-blue-900 shadow-sm relative overflow-hidden tracking-wide"
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                 style={{ 
                   backgroundSize: "200% 200%", 
-                  backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(219, 234, 254, 0.7), rgba(255, 255, 255, 0.5))" 
+                  backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(224, 242, 254, 0.9), rgba(255, 255, 255, 0.7))" 
                 }}
               >
-                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse relative z-10"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse relative z-10"></span>
                 <span className="relative z-10 drop-shadow-sm">Pioneering Enterprise Solutions</span>
               </motion.div>
 
