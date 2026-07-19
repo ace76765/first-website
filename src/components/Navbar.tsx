@@ -116,7 +116,7 @@ export default function Navbar() {
                   {content.services.map((service, index) => (
                     <div key={service.id}>
                       <Link href={`/services/${service.id}`} onClick={closeDropdown} className="relative z-10 px-4 py-3 rounded-2xl hover:bg-black/5 text-blue-950 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center">
-                        <span className="block font-semibold text-sm text-center leading-snug">{service.title}</span>
+                        <span className="block font-semibold text-sm lg:text-[15px] text-center leading-snug">{service.title}</span>
                       </Link>
                       {index < content.services.length - 1 && (
                         <div className="w-1/3 mx-auto border-t border-blue-900/10"></div>
@@ -126,7 +126,7 @@ export default function Navbar() {
                   
                   <div className="w-1/3 mx-auto border-t border-blue-900/10 mt-1 mb-1"></div>
                   <Link href="/services" onClick={closeDropdown} className="relative z-10 px-4 py-3 rounded-2xl bg-blue-50 hover:bg-blue-100 text-blue-600 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group/link">
-                    <span className="block font-bold text-sm text-center">View All Services</span>
+                    <span className="block font-bold text-sm lg:text-[15px] text-center">View All Services</span>
                     <svg className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
