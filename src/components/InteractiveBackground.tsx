@@ -1,22 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function InteractiveBackground() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springX = useSpring(mouseX, { stiffness: 150, damping: 25 });
+  const springY = useSpring(mouseY, { stiffness: 150, damping: 25 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY
+      // Use requestAnimationFrame to batch updates and prevent main-thread thrashing
+      requestAnimationFrame(() => {
+        mouseX.set(e.clientX);
+        mouseY.set(e.clientY);
       });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [mouseX, mouseY]);
 
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-gradient-to-br from-sky-200 via-blue-200 to-indigo-200">
@@ -31,27 +36,21 @@ export default function InteractiveBackground() {
       {/* Glowing Spotlight following mouse - Smaller and subtler */}
       <motion.div
         className="absolute w-[300px] h-[300px] rounded-full bg-blue-300 blur-[80px] mix-blend-multiply opacity-20"
-        animate={{
-          x: mousePosition.x - 150, 
-          y: mousePosition.y - 150,
-        }}
-        transition={{
-          type: "tween",
-          ease: "easeOut",
-          duration: 0.15
+        style={{
+          x: springX,
+          y: springY,
+          translateX: "-50%",
+          translateY: "-50%"
         }}
       />
 
       <motion.div
         className="absolute w-[150px] h-[150px] rounded-full bg-blue-100 blur-[50px] mix-blend-overlay opacity-50"
-        animate={{
-          x: mousePosition.x - 75, 
-          y: mousePosition.y - 75,
-        }}
-        transition={{
-          type: "tween",
-          ease: "easeOut",
-          duration: 0.4 
+        style={{
+          x: springX,
+          y: springY,
+          translateX: "-50%",
+          translateY: "-50%"
         }}
       />
       
