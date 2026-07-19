@@ -37,14 +37,14 @@ export default function Careers() {
 
       <div className="max-w-7xl mx-auto px-6 mt-16">
 
-        <h2 className="text-4xl font-extrabold mb-10 text-indigo-950 flex items-center justify-center gap-4 drop-shadow-sm">
-          <div className="bg-white/50 border border-white/60 text-accent-violet p-3 rounded-2xl shadow-sm">
-            <Briefcase className="w-8 h-8" />
+        <h2 className="text-2xl sm:text-4xl font-extrabold mb-6 sm:mb-10 text-indigo-950 flex items-center justify-center gap-3 sm:gap-4 drop-shadow-sm">
+          <div className="bg-white/50 border border-white/60 text-accent-violet p-2 sm:p-3 rounded-2xl shadow-sm">
+            <Briefcase className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
           Current Openings
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {content.careers.openings.map((job, index) => (
             <motion.div 
               key={index}
@@ -52,14 +52,14 @@ export default function Careers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-panel glass-panel-hover rounded-[2rem] p-8 transition-all group flex flex-col relative overflow-hidden"
+              className="glass-panel glass-panel-hover rounded-[2rem] p-6 sm:p-8 transition-all group flex flex-col relative overflow-hidden"
             >
-              <h3 className="text-3xl font-bold text-indigo-950 mb-3 relative z-10">{job.title}</h3>
-              <p className="text-indigo-950/60 font-medium text-[15px] leading-relaxed mb-6 relative z-10">
+              <h3 className="text-xl sm:text-3xl font-bold text-indigo-950 mb-2 sm:mb-3 relative z-10">{job.title}</h3>
+              <p className="text-indigo-950/60 font-medium text-xs sm:text-[15px] leading-relaxed mb-4 sm:mb-6 relative z-10">
                 {job.description}
               </p>
               <div className="mt-auto relative z-10">
-                <span className="text-accent-violet font-bold bg-white/60 border border-white/60 px-4 py-2 rounded-xl text-sm shadow-sm inline-block">
+                <span className="text-accent-violet font-bold bg-white/60 border border-white/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm shadow-sm inline-block">
                   Experience: {job.experience}
                 </span>
               </div>

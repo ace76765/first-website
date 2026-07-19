@@ -37,6 +37,14 @@ export default function Navbar() {
     }
   };
 
+  const handleMobileLinkClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setMobileMenuOpen(false);
+  };
+
   const closeDropdown = () => setDropdownOpen(false);
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -196,10 +204,10 @@ export default function Navbar() {
               {menuOpenedOnPath !== "/" && (
                 <Link href="/" onClick={handleHomeClick} className="border-b border-slate-900/10 pb-2.5 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">Home</Link>
               )}
-              <Link href="/about" className="border-b border-slate-900/10 pb-2.5 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">About</Link>
+              <Link href="/about" onClick={handleMobileLinkClick("/about")} className="border-b border-slate-900/10 pb-2.5 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">About</Link>
               
               <div className="flex flex-col gap-1 border-b border-slate-900/10 pb-2.5">
-                <Link href="/services" className="group flex items-center justify-between text-blue-950/50 hover:text-blue-600 transition-colors uppercase tracking-widest text-[10px] font-bold py-0.5">
+                <Link href="/services" onClick={handleMobileLinkClick("/services")} className="group flex items-center justify-between text-blue-950/50 hover:text-blue-600 transition-colors uppercase tracking-widest text-[10px] font-bold py-0.5">
                   Our Services
                   <div className="w-5 h-5 rounded-full bg-slate-900/5 flex items-center justify-center text-blue-600 group-hover:bg-blue-50 transition-all">
                     <ArrowRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 transition-transform" />
@@ -207,16 +215,16 @@ export default function Navbar() {
                 </Link>
                 <div className="flex flex-col gap-1.5 mt-1 pl-2">
                   {content.services.map((service) => (
-                    <Link key={service.id} href={`/services/${service.id}`} className="text-[15px] font-medium text-slate-700 hover:text-blue-600 transition-colors py-0.5">
+                    <Link key={service.id} href={`/services/${service.id}`} onClick={handleMobileLinkClick(`/services/${service.id}`)} className="text-[15px] font-medium text-slate-700 hover:text-blue-600 transition-colors py-0.5">
                       {service.title}
                     </Link>
                   ))}
                 </div>
               </div>
               
-              <Link href="/careers" className="border-b border-slate-900/10 pb-2.5 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">Careers</Link>
+              <Link href="/careers" onClick={handleMobileLinkClick("/careers")} className="border-b border-slate-900/10 pb-2.5 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">Careers</Link>
               
-              <Link href="/contact" className="mt-2 block w-full py-3.5 text-center bg-gradient-to-r from-sky-400 to-blue-500 text-white font-bold text-[15px] rounded-full shadow-[0_4px_12px_rgba(56,189,248,0.25)] active:scale-95 transition-all">
+              <Link href="/contact" onClick={handleMobileLinkClick("/contact")} className="mt-2 block w-full py-3.5 text-center bg-gradient-to-r from-sky-400 to-blue-500 text-white font-bold text-[15px] rounded-full shadow-[0_4px_12px_rgba(56,189,248,0.25)] active:scale-95 transition-all">
                 Contact Sales
               </Link>
             </div>
