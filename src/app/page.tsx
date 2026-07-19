@@ -241,36 +241,23 @@ export default function Home() {
                   rotateX: { duration: 20, ease: "easeInOut", repeat: Infinity },
                   rotateY: { duration: 30, ease: "easeInOut", repeat: Infinity }
                 }}
-                style={{ perspective: 1200, transformStyle: "preserve-3d", willChange: "transform" }}
+                style={{ perspective: 1200, transformStyle: "preserve-3d" }}
               >
                 {/* Latitudes */}
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div key={`lat-${i}`} className="absolute inset-0 rounded-full border border-blue-500/30" style={{ transform: `rotateX(${i * 20}deg)`, willChange: "transform" }} />
-                ))}
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(0deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(30deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(60deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(90deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(120deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(150deg)" }} />
                 
                 {/* Longitudes */}
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div key={`lon-${i}`} className="absolute inset-0 rounded-full border border-blue-500/30" style={{ transform: `rotateY(${i * 20}deg)`, willChange: "transform" }} />
-                ))}
-              </motion.div>
-
-              {/* Layer 1.5: Inner Counter-Rotating Core */}
-              <motion.div 
-                className="absolute w-[45%] h-[45%] rounded-full"
-                animate={{ rotateZ: [360, 0], rotateX: [-20, 40, -20], rotateY: [30, -30, 30] }}
-                transition={{ 
-                  rotateZ: { duration: 30, ease: "linear", repeat: Infinity },
-                  rotateX: { duration: 25, ease: "easeInOut", repeat: Infinity },
-                  rotateY: { duration: 35, ease: "easeInOut", repeat: Infinity }
-                }}
-                style={{ perspective: 1000, transformStyle: "preserve-3d", willChange: "transform" }}
-              >
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div key={`inner-lat-${i}`} className="absolute inset-0 rounded-full border border-indigo-400/30" style={{ transform: `rotateX(${i * 30}deg)`, willChange: "transform" }} />
-                ))}
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div key={`inner-lon-${i}`} className="absolute inset-0 rounded-full border border-indigo-400/30" style={{ transform: `rotateY(${i * 30}deg)`, willChange: "transform" }} />
-                ))}
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(0deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(30deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(60deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(90deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(120deg)" }} />
+                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(150deg)" }} />
               </motion.div>
 
               {/* Layer 2: Ethereal Liquid Aura (Hidden on mobile to preserve text clarity) */}
