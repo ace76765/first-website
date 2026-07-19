@@ -222,10 +222,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+          <div 
             style={{ perspective: 1200 }}
             className="hidden lg:flex w-full lg:w-[45%] aspect-[4/3] relative z-30 items-center justify-center mt-0"
           >
@@ -299,7 +296,7 @@ export default function Home() {
 
                 </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
