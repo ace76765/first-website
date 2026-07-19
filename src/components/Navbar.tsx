@@ -216,7 +216,7 @@ export default function Navbar() {
               
               <Link href="/careers" className="border-b border-slate-900/10 pb-2.5 text-lg font-semibold text-blue-950 hover:text-blue-600 transition-colors">Careers</Link>
               
-              <Link href="/contact" className="mt-1.5 block w-full py-3 text-center bg-blue-600 text-white font-semibold text-[15px] rounded-2xl shadow-md active:scale-95 transition-transform">
+              <Link href="/contact" className="mt-2 block w-full py-3.5 text-center bg-gradient-to-r from-sky-400 to-blue-500 text-white font-bold text-[15px] rounded-full shadow-[0_4px_12px_rgba(56,189,248,0.25)] active:scale-95 transition-all">
                 Contact Sales
               </Link>
             </div>

@@ -46,7 +46,7 @@ function Footer() {
               <span className="text-[8px] md:text-[10px] font-bold text-slate-500 tracking-[0.05em] uppercase mt-0.5 md:mt-1.5 drop-shadow-sm">DIGITAL SOLUTIONS PVT. LTD.</span>
             </div>
           </Link>
-          <p className="max-w-xs text-xs md:text-[15px] leading-relaxed text-blue-950/80 font-bold mt-2 md:mt-4">{content.tagline}</p>
+          <p className="max-w-xs text-sm md:text-[15px] leading-relaxed text-blue-950/80 font-bold mt-2 md:mt-4">{content.tagline}</p>
         </div>
         
         <div className="col-span-1 md:col-span-2">
