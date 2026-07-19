@@ -358,7 +358,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/60 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-100 hover:-translate-y-2 hover:shadow-md transition-all duration-300 flex flex-col justify-start"
+                className="bg-white/60 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-100 hover:shadow-md transition-all duration-300 flex flex-col justify-start"
               >
                 <div>
                   <div className="h-auto md:h-[195px] lg:h-[175px] flex flex-col justify-start">
