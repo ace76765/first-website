@@ -104,7 +104,7 @@ export default function Home() {
       >
         {/* Mobile Backdrop: 3D Rotating Globe Lines (Crisp & Prominent) */}
         <motion.div 
-          initial={false}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 0.65, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0 z-0 lg:hidden pointer-events-none flex items-center justify-center overflow-hidden"
@@ -144,7 +144,7 @@ export default function Home() {
           
           <div className="w-full lg:w-1/2 relative pointer-events-none z-20 flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div 
-              initial={false}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-block mb-3 lg:mb-6 pointer-events-auto"
             >
@@ -170,7 +170,7 @@ export default function Home() {
             </motion.div>
             
             <motion.h1 
-              initial={false}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-[2.75rem] leading-[1.05] md:text-7xl lg:text-[5rem] font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-sm pointer-events-auto text-blue-950"
@@ -195,9 +195,9 @@ export default function Home() {
             </motion.h1>
             
             <motion.div 
-              initial={false}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base md:text-xl text-blue-950/70 mb-6 lg:mb-8 leading-relaxed font-medium pointer-events-auto max-w-[95%] lg:max-w-none mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{ 
                 __html: content.description
@@ -208,9 +208,9 @@ export default function Home() {
             />
             
             <motion.div
-              initial={false}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-3 lg:gap-4 mt-6 lg:mt-8 pointer-events-auto w-full sm:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0 items-stretch sm:items-center justify-center lg:justify-start"
             >
               <Link href="/services" className="group px-8 py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.8)] text-[15px] lg:text-lg flex items-center justify-center gap-2 border border-white/20">
@@ -223,9 +223,9 @@ export default function Home() {
           </div>
 
           <motion.div 
-            initial={false}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
             style={{ perspective: 1200 }}
             className="hidden lg:flex w-full lg:w-[45%] aspect-[4/3] relative z-30 items-center justify-center mt-0"
           >
