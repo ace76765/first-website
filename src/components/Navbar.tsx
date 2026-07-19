@@ -32,19 +32,14 @@ export default function Navbar() {
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === "/") {
       e.preventDefault();
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTo(0, 0);
-      document.body.scrollTo(0, 0);
-      setMobileMenuOpen(false);
+      window.location.href = "/";
     }
   };
 
   const handleMobileLinkClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === href) {
       e.preventDefault();
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTo(0, 0);
-      document.body.scrollTo(0, 0);
+      window.location.href = href;
     }
     setMobileMenuOpen(false);
   };
