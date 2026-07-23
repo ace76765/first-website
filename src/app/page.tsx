@@ -404,7 +404,7 @@ export default function Home() {
                     Enterprise server systems, secure cloud architecture, and database environments built for absolute uptime.
                   </p>
                 </div>
-                <Link href="/services/cloud-it-support" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-all group/link w-fit">
+                <Link href="/services/technology-infrastructure" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-all group/link w-fit">
                   Configure Systems <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -485,7 +485,7 @@ export default function Home() {
                   Next-generation VoIP communications and robust fiber architectures.
                 </p>
               </div>
-              <Link href="/services/telecom-networking" className="relative z-10 inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-all group/link w-fit">
+              <Link href="/services/telecom-services" className="relative z-10 inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-all group/link w-fit">
                 Explore Telecom <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
