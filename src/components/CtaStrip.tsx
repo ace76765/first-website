@@ -9,8 +9,8 @@ export default function CtaStrip() {
 
   // Hide on contact, careers, and individual service detail pages (which have their own CTA blocks)
   const hideCta = 
-    pathname === "/contact" || 
-    pathname === "/careers" || 
+    pathname.startsWith("/contact") || 
+    pathname.startsWith("/careers") || 
     (pathname.startsWith("/services/") && pathname !== "/services");
 
   if (hideCta) return null;
