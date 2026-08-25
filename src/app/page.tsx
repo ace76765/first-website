@@ -313,7 +313,7 @@ export default function Home() {
             <p className="text-blue-950/70 max-w-4xl mx-auto text-lg sm:text-xl font-medium">Equipping enterprises with cutting-edge IT, telecom, and consultative infrastructure.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               { 
                 title: "Digital IT Solutions", 
@@ -349,13 +349,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-200/60 hover:shadow-md hover:bg-white/60 transition-all duration-300 flex flex-col justify-start relative overflow-hidden group"
+                className="bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-200/60 hover:shadow-md hover:bg-white/60 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
               >
-                <div className="relative z-10">
-                  <div className="h-auto md:h-[195px] lg:h-[175px] flex flex-col justify-start">
-                    <h3 className="text-2xl sm:text-3xl font-black text-blue-950 mb-3 sm:mb-4 tracking-tight">{feature.title}</h3>
-                    <p className="text-blue-950/70 font-medium leading-relaxed text-base sm:text-lg">{feature.desc}</p>
-                  </div>
+                <div className="relative z-10 mb-6 sm:mb-8">
+                  <h3 className="text-2xl sm:text-3xl font-black text-blue-950 mb-3 sm:mb-4 tracking-tight">{feature.title}</h3>
+                  <p className="text-blue-950/70 font-medium leading-relaxed text-base sm:text-lg">{feature.desc}</p>
                 </div>
                 <ul className="space-y-3 sm:space-y-4 border-t border-blue-100/50 pt-5 sm:pt-6 relative z-10">
                   {feature.bullets.map((bullet, idx) => (
