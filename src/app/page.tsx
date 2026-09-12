@@ -119,23 +119,23 @@ export default function Home() {
                 rotateX: { duration: 30, ease: "easeInOut", repeat: Infinity },
                 rotateY: { duration: 40, ease: "easeInOut", repeat: Infinity }
               }}
-              style={{ perspective: 1200, transformStyle: "preserve-3d" }}
+              style={{ perspective: 1200, transformStyle: "preserve-3d", willChange: "transform" }}
             >
               {/* Latitudes */}
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(0deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(30deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(60deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(90deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(120deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(150deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(0deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(30deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(60deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(90deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(120deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(150deg)" }} />
               
               {/* Longitudes */}
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(0deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(30deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(60deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(90deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(120deg)" }} />
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(150deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(0deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(30deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(60deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(90deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(120deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(150deg)" }} />
             </motion.div>
           </div>
         </motion.div>
@@ -232,23 +232,23 @@ export default function Home() {
                   rotateX: { duration: 20, ease: "easeInOut", repeat: Infinity },
                   rotateY: { duration: 30, ease: "easeInOut", repeat: Infinity }
                 }}
-                style={{ perspective: 1200, transformStyle: "preserve-3d" }}
+                style={{ perspective: 1200, transformStyle: "preserve-3d", willChange: "transform" }}
               >
                 {/* Latitudes */}
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(0deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(30deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(60deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(90deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(120deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(150deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(0deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(30deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(60deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(90deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(120deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateX(150deg)" }} />
                 
                 {/* Longitudes */}
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(0deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(30deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(60deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(90deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(120deg)" }} />
-                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(150deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(0deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(30deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(60deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(90deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(120deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ willChange: "transform", outline: "1px solid transparent", transform: "rotateY(150deg)" }} />
               </motion.div>
 
               {/* Layer 2: Ethereal Liquid Aura (Hidden on mobile to preserve text clarity) */}
@@ -276,7 +276,7 @@ export default function Home() {
                       style={{
                         x: "-50%",
                         y: "-50%",
-                        background: "conic-gradient(from 0deg, transparent 0%, transparent 40%, rgba(56, 189, 248, 1) 50%, rgba(59, 130, 246, 1) 60%, transparent 70%, transparent 100%)",
+                        willChange: "transform", background: "conic-gradient(from 0deg, transparent 0%, transparent 40%, rgba(56, 189, 248, 1) 50%, rgba(59, 130, 246, 1) 60%, transparent 70%, transparent 100%)",
                       }}
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 6, ease: "linear", repeat: Infinity }}
