@@ -40,10 +40,10 @@ function AnimatedCounter({ from, to, suffix, label }: { from: number, to: number
   return (
     <div 
       ref={nodeRef} 
-      className="relative overflow-hidden flex items-center gap-6 p-7 bg-gradient-to-br from-white/70 via-blue-50/30 to-indigo-50/40 backdrop-blur-xl rounded-3xl border border-blue-200/50 shadow-[0_20px_40px_-20px_rgba(30,58,138,0.12)] hover:shadow-[0_25px_50px_-20px_rgba(30,58,138,0.18)] hover:scale-[1.03] transition-all duration-300 group"
+      className="relative overflow-hidden flex items-center gap-6 p-7 bg-gradient-to-br from-white/70 via-blue-50/30 to-indigo-50/40 backdrop-blur-xl rounded-3xl border border-blue-200/50 shadow-[0_20px_40px_-20px_rgba(30,58,138,0.12)] hover:shadow-[0_25px_50px_-20px_rgba(30,58,138,0.18)] hover:scale-[1.03] transition-colors transition-shadow transition-transform duration-300 group"
     >
       {/* Dynamic ambient color glow matched to the metric icon */}
-      <div className={`absolute -right-4 -bottom-4 w-28 h-28 rounded-full blur-2xl opacity-40 transition-all duration-300 group-hover:scale-125 ${
+      <div className={`absolute -right-4 -bottom-4 w-28 h-28 rounded-full blur-2xl opacity-40 transition-colors transition-shadow transition-transform duration-300 group-hover:scale-125 ${
         label.includes("Experience") ? "bg-blue-400/20" : label.includes("Delivered") ? "bg-indigo-400/20" : "bg-sky-400/20"
       }`} />
       
@@ -68,13 +68,13 @@ function FAQAccordion({ faq, index }: { faq: any, index: number }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`rounded-2xl overflow-hidden transition-all duration-300 border ${isOpen ? 'bg-white shadow-md border-blue-200' : 'bg-white/40 border-blue-100 hover:bg-white/60'}`}>
+    <div className={`rounded-2xl overflow-hidden transition-colors transition-shadow transition-transform duration-300 border ${isOpen ? 'bg-white shadow-md border-blue-200' : 'bg-white/40 border-blue-100 hover:bg-white/60'}`}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left p-6 md:p-8 flex items-center justify-between gap-6 transition-colors cursor-pointer"
       >
         <h3 className="text-lg md:text-xl font-semibold text-blue-950 leading-snug">{faq.question}</h3>
-        <div className={`shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow-md transition-all duration-300 ${isOpen ? 'shadow-inner' : ''}`}>
+        <div className={`shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow-md transition-colors transition-shadow transition-transform duration-300 ${isOpen ? 'shadow-inner' : ''}`}>
           <ChevronDown className={`w-5 h-5 text-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
         </div>
       </button>
@@ -122,20 +122,20 @@ export default function Home() {
               style={{ perspective: 1200, transformStyle: "preserve-3d" }}
             >
               {/* Latitudes */}
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(0deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(30deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(60deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(90deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(120deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateX(150deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(0deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(30deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(60deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(90deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(120deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateX(150deg)" }} />
               
               {/* Longitudes */}
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(0deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(30deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(60deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(90deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(120deg)" }} />
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-blue-400/60" style={{ transform: "rotateY(150deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(0deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(30deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(60deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(90deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(120deg)" }} />
+              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1.5px_rgba(96,165,250,0.4)]" style={{ outline: "1px solid transparent", transform: "rotateY(150deg)" }} />
             </motion.div>
           </div>
         </motion.div>
@@ -207,10 +207,10 @@ export default function Home() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-3 lg:gap-4 mt-6 lg:mt-8 pointer-events-auto w-full sm:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0 items-stretch sm:items-center justify-center lg:justify-start"
             >
-              <Link href="/services" className="group px-8 py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.8)] text-[15px] lg:text-lg flex items-center justify-center gap-2 border border-white/20">
+              <Link href="/services" className="group px-8 py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white font-bold rounded-full hover:scale-105 transition-colors transition-shadow transition-transform duration-500 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.8)] text-[15px] lg:text-lg flex items-center justify-center gap-2 border border-white/20">
                 Explore Services <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
               </Link>
-              <Link href="/contact" className="px-8 py-4 lg:px-10 lg:py-5 bg-white/40 backdrop-blur-md text-blue-950 font-bold border border-blue-200 rounded-full hover:bg-white/60 hover:scale-105 transition-all shadow-sm text-[15px] lg:text-lg flex items-center justify-center">
+              <Link href="/contact" className="px-8 py-4 lg:px-10 lg:py-5 bg-white/40 backdrop-blur-md text-blue-950 font-bold border border-blue-200 rounded-full hover:bg-white/60 hover:scale-105 transition-colors transition-shadow transition-transform shadow-sm text-[15px] lg:text-lg flex items-center justify-center">
                 Contact Sales
               </Link>
             </motion.div>
@@ -235,20 +235,20 @@ export default function Home() {
                 style={{ perspective: 1200, transformStyle: "preserve-3d" }}
               >
                 {/* Latitudes */}
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(0deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(30deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(60deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(90deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(120deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateX(150deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(0deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(30deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(60deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(90deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(120deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateX(150deg)" }} />
                 
                 {/* Longitudes */}
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(0deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(30deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(60deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(90deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(120deg)" }} />
-                <div className="absolute inset-0 rounded-full border-[0.5px] border-blue-500/50" style={{ transform: "rotateY(150deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(0deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(30deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(60deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(90deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(120deg)" }} />
+                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_0_1px_rgba(59,130,246,0.3)]" style={{ outline: "1px solid transparent", transform: "rotateY(150deg)" }} />
               </motion.div>
 
               {/* Layer 2: Ethereal Liquid Aura (Hidden on mobile to preserve text clarity) */}
@@ -349,7 +349,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-200/60 hover:shadow-md hover:bg-white/60 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+                className="opacity-0 translate-y-5 bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm border border-blue-200/60 hover:shadow-md hover:bg-white/60 transition-colors transition-shadow transition-transform duration-300 flex flex-col justify-between relative overflow-hidden group"
               >
                 <div className="relative z-10 mb-6 sm:mb-8">
                   <h3 className="text-2xl sm:text-3xl font-black text-blue-950 mb-3 sm:mb-4 tracking-tight">{feature.title}</h3>
@@ -386,7 +386,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-8 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden group shadow-sm hover:shadow-md hover:bg-white/60 transition-all duration-300"
+              className="opacity-0 translate-y-5 md:col-span-8 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden group shadow-sm hover:shadow-md hover:bg-white/60 transition-colors transition-shadow transition-transform duration-300"
             >
               {/* Grid pattern backdrop */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.015)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none opacity-60"></div>
@@ -402,7 +402,7 @@ export default function Home() {
                     Enterprise server systems, secure cloud architecture, and database environments built for absolute uptime.
                   </p>
                 </div>
-                <Link href="/services/technology-infrastructure" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-all group/link w-fit">
+                <Link href="/services/technology-infrastructure" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-colors transition-shadow transition-transform group/link w-fit">
                   Configure Systems <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -444,7 +444,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="md:col-span-4 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 flex flex-col justify-between group overflow-hidden relative shadow-sm hover:shadow-md hover:bg-white/60 transition-all duration-300"
+              className="opacity-0 translate-y-5 md:col-span-4 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 flex flex-col justify-between group overflow-hidden relative shadow-sm hover:shadow-md hover:bg-white/60 transition-colors transition-shadow transition-transform duration-300"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-2xl -mr-10 -mt-10 rounded-full"></div>
               
@@ -483,7 +483,7 @@ export default function Home() {
                   Next-generation VoIP communications and robust fiber architectures.
                 </p>
               </div>
-              <Link href="/services/telecom-services" className="relative z-10 inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-all group/link w-fit">
+              <Link href="/services/telecom-services" className="relative z-10 inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-base mt-6 transition-colors transition-shadow transition-transform group/link w-fit">
                 Explore Telecom <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -494,7 +494,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="md:col-span-4 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 flex flex-col justify-between group overflow-hidden relative shadow-sm hover:shadow-md hover:bg-white/60 transition-all duration-300"
+              className="opacity-0 translate-y-5 md:col-span-4 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 flex flex-col justify-between group overflow-hidden relative shadow-sm hover:shadow-md hover:bg-white/60 transition-colors transition-shadow transition-transform duration-300"
             >
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-500/10 blur-2xl -mr-10 -mb-10 rounded-full"></div>
               
@@ -531,7 +531,7 @@ export default function Home() {
                   24/7 inbound customer support, technical helpdesks, and enterprise telemarketing solutions.
                 </p>
               </div>
-              <Link href="/services/call-center" className="relative z-10 inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-bold text-base mt-6 transition-all group/link w-fit">
+              <Link href="/services/call-center" className="relative z-10 inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-bold text-base mt-6 transition-colors transition-shadow transition-transform group/link w-fit">
                 Learn More <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -542,7 +542,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="md:col-span-8 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden group shadow-sm hover:shadow-md hover:bg-white/60 transition-all duration-300"
+              className="opacity-0 translate-y-5 md:col-span-8 bg-white/40 backdrop-blur-xl border border-blue-200/60 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden group shadow-sm hover:shadow-md hover:bg-white/60 transition-colors transition-shadow transition-transform duration-300"
             >
               {/* Grid pattern backdrop */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.015)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none opacity-60"></div>
@@ -558,7 +558,7 @@ export default function Home() {
                     Partner with our veteran IT consultants to align your technology deployments with your corporate growth targets and optimize performance.
                   </p>
                 </div>
-                <Link href="/services/consulting" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-bold text-base mt-6 transition-all group/link w-fit">
+                <Link href="/services/consulting" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-bold text-base mt-6 transition-colors transition-shadow transition-transform group/link w-fit">
                   Consult Experts <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -608,7 +608,7 @@ export default function Home() {
                 backgroundSize: "200% 200%",
                 backgroundImage: "linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%)"
               }}
-              className="rounded-full shadow-lg hover:shadow-blue-400/25 hover:scale-105 transition-all duration-300 border border-white/30 overflow-hidden"
+              className="rounded-full shadow-lg hover:shadow-blue-400/25 hover:scale-105 transition-colors transition-shadow transition-transform duration-300 border border-white/30 overflow-hidden"
             >
               <Link href="/services" className="inline-flex items-center gap-3 px-10 py-5 text-white font-bold text-lg cursor-pointer">
                 Explore Enterprise Solutions <ArrowRight className="w-6 h-6" />
@@ -658,7 +658,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2 }}
-                className="bg-gradient-to-br from-white/90 via-stone-50/90 to-blue-50/70 backdrop-blur-xl pt-24 pb-10 px-10 flex flex-col justify-between rounded-[2.5rem] shadow-md border border-amber-900/5 relative group hover:shadow-lg transition-all duration-500 mt-20"
+                className="opacity-0 translate-y-5 bg-gradient-to-br from-white/90 via-stone-50/90 to-blue-50/70 backdrop-blur-xl pt-24 pb-10 px-10 flex flex-col justify-between rounded-[2.5rem] shadow-md border border-amber-900/5 relative group hover:shadow-lg transition-colors transition-shadow transition-transform duration-500 mt-20"
               >
                 {/* Portrait Circle Top Center Sticking Out */}
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-stone-50 bg-slate-200 z-20 group-hover:scale-105 transition-transform duration-500">
